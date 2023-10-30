@@ -30,12 +30,12 @@ This is to specify the date when the post was posted. You can use the following 
 ```python
 import datetime
 
-datetime.datetime.now(
-    datetime.timezone(
-        # Replace this with your timezone
-        datetime.timedelta(hours=2)
-    )
-).strftime('%Y-%m-%d %H:%M:%S %z')
+tz = datetime.timezone(
+    # Replace this with your timezone
+    datetime.timedelta(hours=2)
+)
+now = datetime.datetime.now()
+now = now.replace(tzinfo=tz)
 ```
 
 title: A title
