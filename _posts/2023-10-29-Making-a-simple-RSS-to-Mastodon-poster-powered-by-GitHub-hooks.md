@@ -1,7 +1,7 @@
 ---
 layout: post
 date:   2023-10-29 22:45:26 +0200
-title:  Making-a-simple-RSS-to-Mastodon-poster-powered-by-GitHub-hooks
+title:  Making a simple RSS to Mastodon poster powered by GitHub hooks
 ---
 Decided to make a simple RSS to Mastodon poster powered by GitHub hooks.
 
