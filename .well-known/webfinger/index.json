@@ -15,10 +15,6 @@
             "rel": "self",
             "type": "application/activity+json",
             "href": "https://toot.cat/users/DPSsys"
-        },
-        {
-            "rel": "http://ostatus.org/schema/1.0/subscribe",
-            "template": "https://toot.cat/authorize_interaction?uri={uri}"
         }
     ]
 }
