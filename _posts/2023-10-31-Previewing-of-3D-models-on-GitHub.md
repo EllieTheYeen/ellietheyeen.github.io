@@ -36,6 +36,7 @@ As you should be able to see below here is a 3D model that you can click on and 
 
 {% gist fe1db023f985d2da7dae820e3e8fe8b0 %}
 
-The syntax to preview any Gist here on GitHub in a markdown document is  
+The syntax to preview any Gist here on GitHub pages in a markdown document is  
 `{% raw %}{% gist fe1db023f985d2da7dae820e3e8fe8b0 %}{% endraw %}`  
 Where the hex string is what you get from the URL of a Gist.
+The downside of this is that this method will only work on GitHub pages and now in a md file on github.com
