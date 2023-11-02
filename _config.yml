@@ -5,6 +5,7 @@ description: >-
 
 plugins:
   - jekyll-feed
+  - jekyll-relative-links
 
 relative_links:
   enabled: true
