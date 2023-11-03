@@ -8,6 +8,7 @@ Generally on blogs the comment section loads automatically but we generally do n
 
 Below is an example of an include HTML file which I made for usage for a dynamically loaded comment section so only when you press the button the external sites are actually loaded.  
 <https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/_includes/disqus.html>
+{% raw %}
 ```html
 <div id="disqus_thread"><button onclick="event.target.remove(); load_comments(); delete load_comments">Comments and Upvotes (DISQUS)</button></div>
 <script>
@@ -24,19 +25,22 @@ Below is an example of an include HTML file which I made for usage for a dynamic
     };
 </script>
 ```
+{% endraw %}
 You can see the button will run the function that adds the script to the page and it is not loaded before that. It is also clarified which system is used for the comment sections so users that do not want to use that service do not have to load it up either for privacy or performance reasons.
 
 ## How to make comments only appear in posts and not all pages
 What we also want to do is to include that file somehow and we only want to include it in posts at least for now and not pages like the about page and such so therefore we include it in the post layout which posts use.  
 <https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/_layouts/post.html>
+{% raw %}
 ```liquid
-{% raw %}---
+---
 layout: base
 ---
 {{ content }}
 
-{% include disqus.html %}{% endraw %}
+{% include disqus.html %}
 ```
+{% endraw %}
 This will ensure that only pages that are blog posts will have a section when loaded even tho technically any page could have it like even the main page.
 
 You might also have seen that if you look at the source code for this page on GitHub that I had to use the Liquid raw tags to make sure I did not execute the liquid template engine when I showed example code since otherwise the entire contents of the page would end up in the code section.
