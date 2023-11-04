@@ -79,7 +79,16 @@ There are many tools which can help you fetch and preview meta tags for use when
 
 Either what you can do now is to use some premade tool like [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag) if you use jekyll or there might be something out there relevant to your CMS if you use one.
 
+If you use Twitter you should look into Twitter cards and add a tag such as
+```html
+<meta name="twitter:card" content="summary" />
+```
+to get a proper preview on Twitter like in the screenshot and you can read about twitter cards here  
+<https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards>
+
 If you make your own site from scratch you can implement dynamically generated tags relevant to the content. You just make sure that they are generated server side as most bots will not load and run the JavaScript even tho so do that using tools such as [PhantomJS](https://phantomjs.org/).
+
+Edit 2023-11-04: Added info about Twitter cards
 
 Now you should know what you need to know in order to make a website that looks fancy on social media to make more engaging content for your readers and for the bots too since they also get to read the new tags that you just added.
 
