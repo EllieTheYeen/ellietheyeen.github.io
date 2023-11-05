@@ -43,7 +43,7 @@
         if (inst.substr(inst.length - 1) === "/") {
             inst = inst.substr(0, inst.length - 1)
         }
-        var text = `${document.URL}\n${document.title}`
+        var text = `${document.URL}\n{{ page.title | escape }}`
         var share = document.getElementById("mastodon_share")
         share.href = `${inst}/share?text=${encodeURIComponent(text)}`
     }
