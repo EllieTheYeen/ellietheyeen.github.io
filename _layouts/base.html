@@ -19,10 +19,12 @@ By {{ page.author }}
 By {{ site.author | escape }}
 {% else %}
 {% endif %}
+
 <div id="bottomlinks">
     <a href="#a-title">Top</a>
     <a href="/">Home</a>
     <a href="/feed.xml">RSS</a>
     <a href="https://toot.cat/@DPSsys" target="_blank" rel="me">Mastodon</a>
     <a href="https://ellietheyee.nu/" target="_blank">Social</a>
+    <a href="{{ page.path | prepend: 'https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/' }}">Source</a>
 </div>
