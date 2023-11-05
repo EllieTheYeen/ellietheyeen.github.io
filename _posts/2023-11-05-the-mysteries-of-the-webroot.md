@@ -49,7 +49,10 @@ A HUGE amount of robots will visit your website for all kinds of reasons. Here i
 10. Site accelerators that fetch pages that it predicts you might fetch or converting data for slow clients 
 11. You clicked on some link on a website that then read the `referer` header on your request and sent a bot back to analyze it. The creative commons license website has been known to do this.
 12. [Pingbacks](https://en.wikipedia.org/wiki/Pingback) for your blog like wordpress `xmlrpc.php` which is used to find who referenced your article in their own
-
+13. Vulnerability scanners that are meant to warn users
+14. Bots simply just fetching the title such as ones on wikis
+15. Down detectors that verify that your website is online
+16. Mastodon verifying that you have a rel="me" for verification looking like this: `<a href="https://toot.cat/@DPSsys" target="_blank" rel="me">Mastodon</a>`
 
 ### Example of disallowing
 Below is an example of blocking 2 different ChatGPT related robots. The first one is to block the crawling bot and the second is to block the user operated bot and this was found at <https://www.furaffinity.net/robots.txt>

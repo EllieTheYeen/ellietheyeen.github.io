@@ -13,3 +13,4 @@ relative_links:
   collections: true
 
 include: [".well-known"]
+timezone: Europe/Stockholm
