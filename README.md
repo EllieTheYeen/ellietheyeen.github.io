@@ -1,3 +1,4 @@
 # Blog
-This is the repository for our blog  
-[https://ellietheyeen.github.io/](https://ellietheyeen.github.io/)
+This is the repository for my blog mostly about programming
+
+<https://ellietheyeen.github.io/>

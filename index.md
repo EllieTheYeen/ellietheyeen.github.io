@@ -1,5 +1,5 @@
 ---
 layout: home
-title: Home
+title: The yeen deer softness blog
 ---
-Hi this is my blog mostly about programming
+Hi this is a yeen deers blog mostly about programming
