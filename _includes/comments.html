@@ -1,0 +1,50 @@
+<div id="commentbuttons">
+    <button style="color: white; background-color: black; border-radius: 5px;"
+        onclick="event.target.remove(); load_disqus(); delete load_disqus">Comments (DISQUS)</button>
+    <button style="color: white; background-color: black; border-radius: 5px;"
+        onclick="event.target.remove(); load_mastodon(); delete load_mastodon">Comments (Mastodon)</button>
+</div>
+<div id="mastodon_thread"></div>
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = "{{ 'https://ellietheyeen.github.io' | append: page.url }}";
+        this.page.identifier = "{{ page.id }}";
+    };
+
+    var load_disqus = function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://ellietheyeen.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    };
+
+    var thisid = "{{ page.id | slice: 1, 999 | replace: '/', '-' }}"
+    console.log(thisid)
+    var load_mastodon = function () {
+        fetch("https://gist.githubusercontent.com/EllieTheYeen/d83b14c225c8233e9c458f9d3889442b/raw/posts.csv")
+            .catch((e) => document.getElementById("mastodon_thread").textContent = e)
+            .then((d) => d.text()).then((t) => {
+                var thisarticle = null;
+                var lines = t.split("\n");
+                for (var i = 0; i < lines.length; i++) {
+                    var a = lines[i].split(",")
+                    if (a[1] === thisid) {
+                        thisarticle = a[0];
+                    }
+                }
+                var elem = document.getElementById("mastodon_thread");
+                if (thisarticle === null) {
+                    elem.textContent = "Sorry we could not find the post. It might not have been posted yet"
+                    return
+                }
+                var p = document.createElement("p")
+                var a = document.createElement("a");
+                a.href = `https://toot.cat/@DPSsys/${thisarticle}`;
+                a.text = "Comment on this post to add a comment"
+                p.appendChild(a)
+                elem.appendChild(p)
+                // "https://toot.cat/api/v1/statuses/111386223473577559/context"
+         })
+    }
+</script>
