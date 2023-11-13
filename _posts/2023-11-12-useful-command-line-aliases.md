@@ -3,7 +3,7 @@ layout: post
 title: Useful command line aliases
 date: 2023-11-12 14:27
 ---
-There are quite a bit of useful aliases you can have on your command line in order to do many useful things. Having aliases makes using the shell much easier and if you have any command that is hard to remember or write I really recommend to add it to aliases since then you will have a way easier command line experience. Here are some of the aliases I use on my command line that gets sourced `~/.bashrc` and `~/.zshrc`
+There are quite a bit of useful aliases you can have on your command line in order to do many useful things. Having aliases makes using the shell much easier and if you have any command that is hard to remember or write I really recommend to add it to aliases since then you will have a way easier command line experience. Here are some of the aliases I use on my command line that gets sourced in `~/.bashrc` and `~/.zshrc`
 
 ```shell
 alias bat='bat -pp --theme="Monokai Extended Origin"'
