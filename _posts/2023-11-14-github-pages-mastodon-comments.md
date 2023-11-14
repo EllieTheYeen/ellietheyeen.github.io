@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mastodon comment section in GitHub pages
+title: Mastodon comment section on GitHub pages
 date: 2023-11-14 06:22
 ---
 So you want a comment section on your blog on [Jekyll](https://jekyllrb.com/) but as it is static you cannot do any server side processing at all and you have to rely on [Disqus](https://ellietheyeen.github.io/2023/11/03/comments-blog-disqus.html) or a similar service. Another thing you can do it make your own comment section using Mastodon since it tends to have a very open API with `Access-Control-Allow-Origin: *` which means that JavaScript in a browser can access the data. This is something that has been done by quite a few like [here](https://www.kylereddoch.me/2023/02/13/adding-mastodon-comments-jekyll-blog.html) and [here](https://yidhra.farm/tech/jekyll/2022/01/03/mastodon-comments-for-jekyll.html) so it is not an entirely new concept but it is a useful one.
