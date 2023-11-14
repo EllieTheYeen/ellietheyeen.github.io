@@ -1,24 +1,21 @@
-<div id="share" style="margin-bottom: 10px;">
+<div id="share">
     Share on
-    <a style="text-decoration: none;"
+    <a class="sharelink"
         href="https://www.tumblr.com/widgets/share/tool?posttype=link&canonicalUrl={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}&title={{ page.title | uri_escape }}&caption=&content=&tags=">
-        <span
-            style="display:inline-block; height: 20px; color: #FFFFFF; background-color: #34465D; padding: 6px; border-radius: 6px;">Tumblr</span>
+        <span class="sharebutton" style="background-color: #34465D;">Tumblr</span>
     </a>
-    <a style="text-decoration: none;"
+    <a class="sharelink"
         href="https://twitter.com/intent/tweet?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}&text={{ page.title | uri_escape }}">
-        <span
-            style="display:inline-block; height: 20px; color: #FFFFFF; background-color: #08a0e9; padding: 6px; border-radius: 6px;">Twitter</span>
+        <span class="sharebutton" style="background-color: #08a0e9;">Twitter</span>
     </a>
-    <span
-        style="cursor: pointer; display:inline-block; height: 20px; color: #FFFFFF; background-color: #6260fa; padding: 6px; border-radius: 6px;"
-        type="button" data-toggle="modal" data-target="#myModal" onclick="mastodon_modal()">Mastodon</span>
+    <span class="sharebutton" style="background-color: #6260fa;" onclick="mastodon_modal()">Mastodon</span>
 </div>
-<dialog id="mastodon_modal" style="color: white; background-color: black;">
+<dialog id="mastodon_modal">
     <button onclick="mastodon_modal(true)">Close</button><br />
-    Instance: <input id="mast_inst" name="mastodon" oninput="mastodon_share()" type="text" placeholder="toot.cat" /><br />
-    <a id="mastodon_share" style="text-decoration: none;" target="_blank">
-        <span style="cursor: pointer; display:inline-block; height: 20px; color: #FFFFFF; background-color: #6260fa; padding: 6px; border-radius: 6px;">Share</span>
+    Instance: <input id="mast_inst" name="mastodon" oninput="mastodon_share()" type="text"
+        placeholder="toot.cat" /><br />
+    <a id="mastodon_share" class="sharelink" target="_blank">
+        <span class="sharebutton" style="background-color: #6260fa;">Share</span>
     </a>
 </dialog>
 <script>
@@ -43,7 +40,7 @@
         if (inst.substr(inst.length - 1) === "/") {
             inst = inst.substr(0, inst.length - 1)
         }
-        var text = `${document.URL}\n{{ page.title | escape }}`
+        var text = `${document.URL}\n{{ page.title | escape }}\n`
         var share = document.getElementById("mastodon_share")
         share.href = `${inst}/share?text=${encodeURIComponent(text)}`
     }
