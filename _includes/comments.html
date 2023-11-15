@@ -24,18 +24,20 @@
     var thisid = "{{ page.id | slice: 1, 999 | replace: '/', '-' }}"
     console.log(thisid)
     var load_mastodon = function () {
+        var info = document.getElementById("mastsinfobox");
+        info.textContent = "Loading comments"
         fetch("https://gist.githubusercontent.com/EllieTheYeen/d83b14c225c8233e9c458f9d3889442b/raw/posts.csv")
-            .then((d) => d.text())
-            .then((t) => {
+            .then(async (d) => {
+                var t = await d.text()
                 var thisarticle = null;
                 var lines = t.split("\n");
                 for (var i = 0; i < lines.length; i++) {
                     var a = lines[i].split(",")
                     if (a[1] === thisid) {
                         thisarticle = a[0];
+                        console.log(thisarticle)
                     }
                 }
-                var info = document.getElementById("mastsinfobox");
                 if (thisarticle === null) {
                     info.textContent = "Sorry we could not find the post. It might not have been posted yet"
                     return
@@ -45,9 +47,7 @@
                 a.target = "_blank"
                 a.text = "Reply to this post to add a comment"
                 document.getElementById("mastcomenurl").appendChild(a)
-                info.textContent = "Loading comments"
-                fetch(`https://toot.cat/api/v1/statuses/${thisarticle}/context`)
-                    .catch((e) => document.getElementById("mastodon_thread").textContent = e)
+                await fetch(`https://toot.cat/api/v1/statuses/${thisarticle}/context`)
                     .then((d) => d.json())
                     .then((j) => {
                         if (!j.descentants) {
@@ -82,7 +82,7 @@
                         }
                         info.textContent = `${i} comments`
                     })
-                    .catch((e) => info.textContent = e)
             })
+            .catch((e) => info.textContent = e)
     }
 </script>
