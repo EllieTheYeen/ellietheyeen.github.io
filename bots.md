@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Bots
+showontop: true
 ---
 Various posting bot projects
 ## Mastodon

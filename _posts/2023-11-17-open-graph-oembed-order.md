@@ -209,22 +209,22 @@ Each site has their own order of fetching and using meta tags and oEmbed in orde
 
 Here is a table that shows the priority order of which tags are used on which site.
 
-| Source     Site ->  | Twitter | Bsky | Slack | Discord | Mastodon |
-|---------------------|---------|------|-------|---------|----------|
-| oEmbed              | no      | no   | no    | 1       | 1        |
-|                     |         |      |       |         |          |
-| og:title            | 2       | 2    | 1     | 1       | 2        |
-| twitter:title       | 1       | 1    | 2     | 2       | no       |
-| meta title          | no      | 3    | 3     | 3       | 3        |
-|                     |         |      |       |         |          |
-| meta description    | no      | 2    | 3     | 3       | 3        |
-| og:description      | 2       | 3    | 1     | 1       | 2        |
-| twitter:description | 1       | 1    | 2     | 2       | no       |
-|                     |         |      |       |         |          |
-| og:image            | 2       | 2    | no    | 1       | 2        |
-| twitter:image       | 1       | 1    | no    | 2       | no       |
-|                     |         |      |       |         |          |
-| og:site_name        | no      | no   | no    | 2       | 1        |
+| Source         Site ->  | Twitter | Bsky | Slack | Discord | Mastodon |
+|-------------------------|---------|------|-------|---------|----------|
+| **oEmbed**              | no      | no   | no    | 1       | 1        |
+|                         |         |      |       |         |          |
+| **og:title**            | 2       | 2    | 1     | 1       | 2        |
+| **twitter:title**       | 1       | 1    | 2     | 2       | no       |
+| **meta title**          | no      | 3    | 3     | 3       | 3        |
+|                         |         |      |       |         |          |
+| **meta description**    | no      | 2    | 3     | 3       | 3        |
+| **og:description**      | 2       | 3    | 1     | 1       | 2        |
+| **twitter:description** | 1       | 1    | 2     | 2       | no       |
+|                         |         |      |       |         |          |
+| **og:image**            | 2       | 2    | no    | 1       | 2        |
+| **twitter:image**       | 1       | 1    | no    | 2       | no       |
+|                         |         |      |       |         |          |
+| **og:site_name**        | no      | no   | no    | 2       | 1        |
 
 Note: If it says 1 on oEmbed it will use that first for things
 

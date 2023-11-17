@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Projects
+showontop: true
 ---
 ## Targeter
 Example of targeting moving objects using JavaScript  
