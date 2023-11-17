@@ -1,0 +1,70 @@
+---
+---
+@import "{{ site.theme }}";
+
+button {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    height: 60px;
+}
+
+table, td {
+    border: 2px solid #000000;
+}
+
+#share {
+    margin-bottom: 10px;
+}
+
+#mastodon_modal {
+    color: white;
+    background-color: black;
+}
+
+#mastcomments {
+    display: grid;
+    gap: 10px;
+}
+
+.mastcomment {
+    background-color: #222222;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    padding-bottom: 15px;
+    display: grid;
+    grid-column: 1;
+    grid-template-columns: 100px auto;
+    gap: 10px;
+}
+
+.mastcommenttext {
+    margin-left: 10px;
+    background-color: #111111;
+    border-radius: 5px;
+    padding: 15px;
+    padding-top: 5px;
+    min-height: 100px;
+    margin-right: 5px;
+    grid-column: 2;
+}
+
+.userinfo {
+    width: 120px;
+    grid-column: 1;
+}
+
+.sharebutton {
+    cursor: pointer;
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    color: #FFFFFF;
+    padding: 6px;
+    border-radius: 6px;
+}
+
+.sharelink {
+    text-decoration: none;
+}
