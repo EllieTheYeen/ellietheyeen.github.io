@@ -198,6 +198,9 @@ Description:
 2. og:description
 3. meta description
 
+Sitename:
+1. og:site_name
+
 Note: If oEmbed exists it will use title and provider name and the picture from it
 
 ---
@@ -221,7 +224,7 @@ Here is a table that shows the priority order of which tags are used on which si
 | og:image            | 2       | 2    | no    | 1       | 2        |
 | twitter:image       | 1       | 1    | no    | 2       | no       |
 |                     |         |      |       |         |          |
-| og:site_name        | no      | no   | no    | 2       | no       |
+| og:site_name        | no      | no   | no    | 2       | 1        |
 
 Note: If it says 1 on oEmbed it will use that first for things
 
