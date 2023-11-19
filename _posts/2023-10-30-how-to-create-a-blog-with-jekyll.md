@@ -119,7 +119,7 @@ And it might generate something like the following accessible on the web like `/
 }
 ```
 
-# Testing locally
+## Testing locally
 First make sure you have jekyll installed. it is a ruby gem so if you have ruby installed you can write `gem install jekyll`.
 You should also make sure to install bundler using `gem install bundler`.
 If you do not have Ruby you should install it first from <https://www.ruby-lang.org/> or use a package manager if there is one you can use for it on your current system.
@@ -137,7 +137,7 @@ The reason for this is that the `--livereload` argument will automatically reloa
 Remember that a lot of files are placed there automatically like if you set a theme in _config.yml the files for the theme will automatically be downloaded.  
 If this is locally you tend to need to install the theme and put it in the `Gemfile`.
 
-# How to actually post
+## How to actually post
 What you do when you want to make a post is create a new file in the _posts folder dated accordingly with and with at least the layout setting filled since otherwise there will be no loaded templates for your post. After that you just have to write whatever you want and when you are done you push to the `gh-pages` branch (As of now the main branch seens to work too if set up that way in repository settings) and GitHub will build it for you and update within a few seconds. You can use GitHub hooks to have things react to your blog being updated and act accordingly.
 
 You should know a bit of markdown in order to make posts but that is something that is very easy to learn. You have perhaps used a chat service such as Discord which has support for markdown.
