@@ -1,7 +1,13 @@
 ---
 layout: base
 ---
+
+<small>{{ page.date | date: "%-d %B %Y" }}</small>
+
 {{ content }}
+
+*Mweeoops* <br />
+<p class="view">by {{ page.author | default: site.author }}</p>
 
 {% include share.html %}
 

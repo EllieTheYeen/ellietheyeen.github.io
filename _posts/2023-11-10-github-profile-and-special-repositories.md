@@ -62,5 +62,3 @@ Used for when a page has a section like this
 and it will default to this folder.
 
 There are probably way more things like this deep in the documentation but these are the ones I have found so far and found useful.
-
-*Mweeoops*

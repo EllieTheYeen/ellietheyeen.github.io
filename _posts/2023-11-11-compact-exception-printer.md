@@ -79,5 +79,3 @@ ValueError('no') # line 126 file /home/pi/test.py
 The only things I could think of possibly doing now is to make sure it really holds up and does not crash during odd cases and such and also maybe sanitize the filenames like instead of displaying a long filename like `/home/pi/.local/lib/python3.9/site-packages/pymysql/__init__.py` it might just display `pymysql/__init__.py` and so in as we do not need the full path in most circumstances but rather just what module had what error and such.
 
 Anyway this was a fun project and was really good to have done as I have had so much strange errors handling exceptions lately with my crossposter becoming increasingly complex every time I modify it and it is probably way over 1k lines currently and I might make a public version of it at some later point.
-
-*Mweeoops*

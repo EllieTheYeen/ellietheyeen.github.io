@@ -138,5 +138,3 @@ And also some things such as this but I have no idea what this does but it seems
 ```
 
 Anyway good luck in getting Python applications working more smoothly on Windows
-
-*Mweeoops*

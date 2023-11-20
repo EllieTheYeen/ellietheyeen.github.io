@@ -260,5 +260,3 @@ in order to get it to respond with the correct data.
 I made a open graph test PHP script that is [here](http://kserver.nu/oginfoecho.php) that just echoes back whatever bot tried to access it so I could get the user agent of different bots.
 
 Anyway I hope you find this information useful and you can use it for your own debugging and development of open graph and previewing things in general. I learnt of the oEmbed protocol today but not sure I am a big fan of it as on a static site it is nothing that seems to work very good and some places like Mastodon does not seem to work that well with it. Also remember that whenever you test things like this it tends to be cached on the site so apply some random parameters in order to make it fetch again and copying and then pasting the URL again tends to help.
-
-*Mweeoops*

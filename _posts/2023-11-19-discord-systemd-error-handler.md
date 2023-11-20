@@ -3,9 +3,9 @@ layout: post
 title: Making a Discord systemd failure handler
 date: 2023-11-19 14:43
 ---
-Did you know that systemd allows you to create special units that run only when other units fail and that they can be used to send notifications when services go down. Now we are going to look at how that would be done using Discord using Webhooks. In the screenshot below is an example of a message generated using this method that uses a discord embed with a custom profile picture.
+Did you know that systemd allows you to create special units that run only when other units fail and that they can be used to send notifications when services go down. Now we are going to look at how that would be done using Discord using Webhooks. In the screenshot below is an example of a message generated using this method that uses a Discord embed with a custom profile picture.
 
-![A Discord mesage from a bot named systemd at 10:01 with the systemd logo that is green square and triangle inside black square brackets. There is a red embed with the title: Service justfail.service failed and description: × justfail.service - This will just fail newline      Loaded: loaded (/home/pi/.config/systemd/user/justfail.service; static) newline      Active: failed (Result: exit-code) since Sun 2023-11-19 10:01:44 CET; 567ms ago newline     Process: 27410 ExecStart=sh -c echo fail; exit 1 (code=exited, status=1/FAILURE) newline    Main PID: 27410 (code=exited, status=1/FAILURE) newline         CPU: 11ms](/images/discordsystemd.png)
+![A Discord message from a bot named systemd at 10:01 with the systemd logo that is green square and triangle inside black square brackets. There is a red embed with the title: Service justfail.service failed and description: × justfail.service - This will just fail newline      Loaded: loaded (/home/pi/.config/systemd/user/justfail.service; static) newline      Active: failed (Result: exit-code) since Sun 2023-11-19 10:01:44 CET; 567ms ago newline     Process: 27410 ExecStart=sh -c echo fail; exit 1 (code=exited, status=1/FAILURE) newline    Main PID: 27410 (code=exited, status=1/FAILURE) newline         CPU: 11ms](/images/discordsystemd.png)
 
 In order to start you want to use a command like the following in order to create or edit the unit we need in order for this to work.  
 `systemctl --user edit --full --force servicefailure@.service`  
@@ -69,5 +69,3 @@ Take note of the `OnFailure` line which defines that the following unit should u
 There are many quirks and such in systemd configuration and you should look at [the documentation](https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html "Systemd unit documentation") in order to understand better if you want to go into detail as there are many format specifiers like `%i` and `%n` for units.
 
 This was a small fun project that has been extremely useful in knowing what services go down in systemd and if you have a Linux machine with systemd we really recommend looking into the more fun features it has.
-
-*Mweeoops*

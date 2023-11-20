@@ -91,5 +91,3 @@ If you make your own site from scratch you can implement dynamically generated t
 Edit 2023-11-04: Added info about Twitter cards
 
 Now you should know what you need to know in order to make a website that looks fancy on social media to make more engaging content for your readers and for the bots too since they also get to read the new tags that you just added.
-
-*Mweeoops*

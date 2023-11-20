@@ -102,5 +102,3 @@ alias chmox='chmod +x'
 Since I keep misspelling chmod +x and if you have some commands you keep misspelling why not add them as aliases
 
 I hope these are useful since I have had a lot of use for them for the many years I have used the command line.
-
-*Mweeoops*

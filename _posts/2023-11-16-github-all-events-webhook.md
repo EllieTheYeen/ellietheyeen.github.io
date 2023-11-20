@@ -52,5 +52,3 @@ What I use my WebHooks for is the [Mastodon comment section](https://ellietheyee
 WebHooks are a great way to have communication between different applications on the open web where sites can talk to each other and automatically respond to events. It can be hard to define what a WebHook exactly is but in general I would say it is a endpoint you set up to recieve events as opposed to a standard web API made to be specifically called in order to fetch data as the direction of where the data is sent defines it and also who wants to have the data recieved.
 
 Feel free to tell what fun projects you have made using WebHooks.
-
-*Mweeoops*

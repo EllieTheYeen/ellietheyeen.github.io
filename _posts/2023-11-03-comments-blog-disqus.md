@@ -47,5 +47,3 @@ You might also have seen that if you look at the source code for this page on Gi
 <https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/_posts/2023-11-03-comments-blog-disqus.md>
 
 You should be able to see the comment section below this and upvote and comment and such.
-
-*Mweeoops*

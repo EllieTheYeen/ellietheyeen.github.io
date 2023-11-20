@@ -156,5 +156,3 @@ There are many fun guides how to do stuff like that like here is one for example
 You should try Liquid out and see what useful things you can do using it like generating very convenient web pages with automatically generated elements. Maybe you want a sidebar with the latest posts shown on every page, Liquid makes this very easy.
 
 Anyway this was a fun little project and can be very useful if you have a jekyll site you want to be able to have programmatically listed with a sitemap.
-
-*Mweeoops*

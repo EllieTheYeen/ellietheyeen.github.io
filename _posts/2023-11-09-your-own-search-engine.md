@@ -122,5 +122,3 @@ You might want to read the suggestions draft on how the things should and could 
 <https://github.com/dewitt/opensearch/blob/master/mediawiki/Specifications/OpenSearch/Extensions/Suggestions/1.1/Draft%201.wiki>
 
 Now you do know how to use OpenSearch and how to make an extremely fancy website where the user can find anything very easily and you might use it for a social media site, a wiki or maybe you just want to make an extremely fancy feature for your blog.
-
-*Mweeoops*
