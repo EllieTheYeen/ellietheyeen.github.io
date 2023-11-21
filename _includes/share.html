@@ -9,6 +9,10 @@
         <span class="sharebutton" style="background-color: #08a0e9;">Twitter</span>
     </a>
     <span class="sharebutton" style="background-color: #6260fa;" onclick="mastodon_modal()">Mastodon</span>
+    <a class="sharelink"
+        href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.title | uri_escape }}%0A{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}%0A">
+        <span class="sharebutton" style="background-color: #26BF74;">Email</span>
+    </a>
 </div>
 <dialog id="mastodon_modal">
     <button onclick="mastodon_modal(true)">Close</button><br />
