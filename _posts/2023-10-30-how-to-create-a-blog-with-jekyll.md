@@ -91,7 +91,7 @@ vendor
 Gemfile.lock
 ```
 ## favicon.ico
-![A small figure resembling a creature](/favicon.ico "A small figure resembling a creature")
+[![A small figure resembling a creature](/favicon.ico "A small figure resembling a creature")](/favicon.ico)
 
 A small picture that will be shown in the browser tab and it is really recommended to have one for people to recognize your blog among tabs. You can put any small picture there
 

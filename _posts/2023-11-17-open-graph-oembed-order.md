@@ -79,7 +79,7 @@ What we need to do now is just copy paste the link into as many chat services an
 ---
 ### Twitter
 
-![A Twitter icon https://randomness.nu/ogtest/ogtest.html newline randomness.nu newline twitter:title newline twitter:description Line 2 in twitter:description here which is converted to a newline by Bsky but is ](/images/twitterpreview.png)
+[![A Twitter icon https://randomness.nu/ogtest/ogtest.html newline randomness.nu newline twitter:title newline twitter:description Line 2 in twitter:description here which is converted to a newline by Bsky but is ](/images/twitterpreview.png)](/images/twitterpreview.png)
 
 As expected Twitter used the Twitter meta tags and shows the picture meant for Twitter and also the host name of the website.
 
@@ -101,7 +101,7 @@ Note: There must be either a twitter:title or a og:title in order for Twitter pr
 
 ---
 ### Bsky
-![A Twitter icon https://randomness.nu/ogtest/ogtest.html newline twitter:title newline https://randomness.nu/ogtest/ogtest.html newline twitter:description newline Line 2 in twitter:description here which is converted to a newline by Bsky but is converted to a space by Twitter](/images/bskypreview.png)
+[![A Twitter icon https://randomness.nu/ogtest/ogtest.html newline twitter:title newline https://randomness.nu/ogtest/ogtest.html newline twitter:description newline Line 2 in twitter:description here which is converted to a newline by Bsky but is converted to a space by Twitter](/images/bskypreview.png)](/images/bskypreview.png)
 
 Bsky is a bit strange as it prioritizes twitter meta tags and even the picture if there but has a quirk that you can put newlines in the tags.
 
@@ -125,7 +125,7 @@ Note: Bsky allows newlines to be kept in the description while Twitter converts 
 
 ---
 ### Slack
-![A favicon icon og:site_name newline og:title newline og:description newline It is possible to put many lines here newline in og:description by placing actual lines in the HTML document newline In fact Mastodon does the same with alt text and it works very good newline It does make the HTML look messy but it is really good for Discord newline Anyway this is some filler text that is useful to see how long descriptions are previewed](/images/slackpreview.png)
+[![A favicon icon og:site_name newline og:title newline og:description newline It is possible to put many lines here newline in og:description by placing actual lines in the HTML document newline In fact Mastodon does the same with alt text and it works very good newline It does make the HTML look messy but it is really good for Discord newline Anyway this is some filler text that is useful to see how long descriptions are previewed](/images/slackpreview.png)](/images/slackpreview.png)
 
 Slack will not use any image from the tags we specified but will instead use the favicon and prioritize open graph tags and allows newlines in the description.
 
@@ -150,7 +150,7 @@ Note: The picture is favicon
 
 ---
 ### Discord
-![An Open Graph icon oEmbed provider_name newline oEmbed author_name newline og:title newline og:description newline It is possible to put many lines here in og:description by placing actual lines in the HTML document newline In fact Mastodon does the same with alt text and it works very good newline It does make the HTML look messy but it is really good for Discord newline Anyway this is some filler text that is useful to see how long descriptions are previewed](/images/discordpreview.png)
+[![An Open Graph icon oEmbed provider_name newline oEmbed author_name newline og:title newline og:description newline It is possible to put many lines here in og:description by placing actual lines in the HTML document newline In fact Mastodon does the same with alt text and it works very good newline It does make the HTML look messy but it is really good for Discord newline Anyway this is some filler text that is useful to see how long descriptions are previewed](/images/discordpreview.png)](/images/discordpreview.png)
 
 Discord has the fanciest preview where you can specify the color and also use oEmbed to make 2 additional links appear instead of the site name and prioritizes open graph and allows newlines in the description.
 
@@ -180,7 +180,7 @@ Note: If oEmbed exists it will replace the site name with the provider_name and 
 
 ---
 ### Mastodon
-![An oEmbed icon newline oEmbed title newline oEmbed provider_name](/images/mastodonpreview.png)
+[![An oEmbed icon newline oEmbed title newline oEmbed provider_name](/images/mastodonpreview.png)](/images/mastodonpreview.png)
 
 ### Mastodon tag priority order
 

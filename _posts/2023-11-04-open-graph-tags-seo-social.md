@@ -4,7 +4,7 @@ date: 2023-11-04 02:52:00 +0100
 ---
 Have you ever seen links posted on social media where you get a preview of the content of the website that you link and wonder how that is made. It is done using certain HTML tags that a bot fetches when you link the webpage. This is of course subject to the `robots.txt` in the web root as most bots tend to follow that when fetching content. Below is an example of how that can look like.
 
-![A Twitter post by username EllieTheYeen with this display name HyenRådjuret Elisabeth ΘΔ. 17h. Text on post: New blog post: Adding comments and upvotes to your blog using Disqus. The preview has a picture of a hyena deer that is blue and red sided and anthropomorphic. The preview text says: ellietheyeen.github.io Adding comments and upvotes to your blog using Disqus. So you have a website and you are using a static website generator like jekyll or you do not want to make your own](/images/twitterpostedlink.png)
+[![A Twitter post by username EllieTheYeen with this display name HyenRådjuret Elisabeth ΘΔ. 17h. Text on post: New blog post: Adding comments and upvotes to your blog using Disqus. The preview has a picture of a hyena deer that is blue and red sided and anthropomorphic. The preview text says: ellietheyeen.github.io Adding comments and upvotes to your blog using Disqus. So you have a website and you are using a static website generator like jekyll or you do not want to make your own](/images/twitterpostedlink.png)](/images/twitterpostedlink.png)
 
 Having posts presented like this drives more engagement to your website and lets visitors know a bit about what the content is about before visiting adn we want visitors from social media sites to see posts that look interesting and visit our websites.
 

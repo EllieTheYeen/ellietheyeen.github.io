@@ -17,7 +17,7 @@ So there is many options here where I recommend that you put something you have 
 Here is a fun fact. You are able to put a Discord WebHook url in the webhook url in github as long as you append /github to the webhook. It looks like this `https://discord.com/api/webhooks/[REDACTED]/[REDACTED]/github` where the redacted parts have the channel and token Discord gives you by default but note the `/github` part which is required for it to work.
 
 Here is an example how it looks like in a Discord channel if it is set up that way  
-![2 Discord messages that says they are from GitHub using the GitHub logo and each of them says that there is a new commit and first one is test branch main from EllieTheYeen Test commit for update and second one is from github-actions commiting the same on the posts branch](/images/discordhookexample.png "Two commits shown on Discord from a bot")
+[![2 Discord messages that says they are from GitHub using the GitHub logo and each of them says that there is a new commit and first one is test branch main from EllieTheYeen Test commit for update and second one is from github-actions commiting the same on the posts branch](/images/discordhookexample.png "Two commits shown on Discord from a bot")](/images/discordhookexample.png)
 
 ## Roll your own receiver
 You can make your own reciever for webhooks which us recommended and you can use PHP do to something like this if where you send messaged to Redis using the Predis PHP library and you can have a query parameter for security so people cannot insert fake data if they find your PHP script there.

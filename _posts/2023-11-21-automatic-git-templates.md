@@ -74,3 +74,5 @@ Update index.md
 #
 ```
 Now we can just enjoy the ease of not having to write commit messages for simple commits.
+
+Noticed later: So there are some issues with this like sometimes unless you make any form of change it will not add the commit. You can change this to make the whole thing use the `-m` parameter instead to set the whole commit message or you can make sure you do a small change each time. The third option is to use the `<(command)` syntac in order to make you have to delete the commit message in order to abort a commit.

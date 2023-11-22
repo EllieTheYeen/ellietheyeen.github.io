@@ -25,7 +25,7 @@ This is really important and browsers tend to automatically try to fetch this to
 ```
 You should have some icon to uniquely identify your website here and you can even use the HTML element to change it dynamically after the page has been loaded to show a different icon if the user has notifications.
 
-![Some small red and blue creature](/favicon.ico)
+[![Some small red and blue creature](/favicon.ico)](/favicon.ico)
 Here is the picture this website has as a favicon and it should be a red and blue creature unless it has been changed when you read this later.
 
 ## robots.txt
