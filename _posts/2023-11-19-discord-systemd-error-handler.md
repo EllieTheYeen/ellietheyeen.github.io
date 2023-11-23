@@ -2,6 +2,11 @@
 layout: post
 title: Making a Discord systemd failure handler
 date: 2023-11-19 14:43
+image: /images/discordsystemd.png
+tags:
+- python
+- discord
+- systemd
 ---
 Did you know that systemd allows you to create special units that run only when other units fail and that they can be used to send notifications when services go down. Now we are going to look at how that would be done using Discord using Webhooks. In the screenshot below is an example of a message generated using this method that uses a Discord embed with a custom profile picture.
 

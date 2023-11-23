@@ -2,6 +2,10 @@
 layout: post
 title: Share dialogs and buttons
 date: 2023-11-23 04:49
+tags:
+- html
+- seo
+- robots.txt
 ---
 On many websites there are buttons to share an article to other sites or to chat services. This is done in the browser either by linking to the website and passing parameters about the post to share or a protocol handler might be used when there is an actual application installed. In the case of email for mailto links it is really any mail that has it registered. We are going to look at different sites dialogs and how the link is constructed.
 

@@ -2,6 +2,10 @@
 layout: post
 title: Posting on Mastodon with GitHub Actions
 date: 2023-11-06 14:15 +0100
+tags:
+- github
+- mastodon
+- python
 ---
 So you might wonder if GitHub Actions can be used to make posts on Mastodon for simple bots such as to do stuff like maybe you want a [Mastodon comment section](https://www.kylereddoch.me/2023/02/13/adding-mastodon-comments-jekyll-blog.html) or something like that and do not want to manually have to add the ids or store them externally.
 

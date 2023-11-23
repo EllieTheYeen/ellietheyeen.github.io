@@ -2,6 +2,11 @@
 layout: post
 title: Add your own search engine in your browser
 date: 2023-11-09 12:34 +0100
+tags:
+- php
+- xml
+- json
+- search
 ---
 Have you ever seen that you are able to second click on the address bar on website and wondered why there is a menu to add something?
 What you will be adding if you press yes is that you are able to have a search engine that pops up in the address bar if you click on it. When you have several search engines added you can hold alt and press the up and down keys to switch what search engine you want to use for the current search. What is also good to know is that you can write something short called a keyword then press `space` or sometimes `tab` and it will select that search engine and then you can enter your term and search with it.

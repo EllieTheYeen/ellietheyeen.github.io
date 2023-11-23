@@ -2,6 +2,10 @@
 layout: post
 date:   2023-11-01 22:57:17 +0200
 title:  Making Python EXE files on Windows
+tags:
+- python
+- windows
+- pip
 ---
 So sometimes you have certain Windows programs that do not really want to take many arguments and want just a single exe file to point at. A good example of this is protocol handlers or just general command line programs for when you do not use tools like cygwin currently.
 

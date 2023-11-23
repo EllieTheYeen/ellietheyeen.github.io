@@ -2,6 +2,11 @@
 layout: post
 title: OpenGraph and oEmbed. Who? What? Why? When? Where?
 date: 2023-11-17 04:14
+image: /images/bskypreview.png
+tags:
+- html
+- json
+- opengraph
 ---
 So when you paste a link into a social media site or a chat app a certain thing tends to happen. The app sends a bot to the site in order to look at it and see what it is and if it is a picture maybe they will display it too you and the others in chat and if it is a HTML page it will find some meta tags and similar data in order to give you a preview in chat for everyone to view.
 

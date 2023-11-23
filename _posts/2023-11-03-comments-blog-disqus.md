@@ -1,6 +1,12 @@
 ---
 title: Adding comments and upvotes to your blog using Disqus
 date: 2023-11-03 06:15:28 +0100
+tags:
+- comments
+- disqus
+- html
+- javascript
+- jekyll
 ---
 So you have a website and you are using a static website generator like jekyll or you do not want to make your own comment section due to the security issues it can cause. What you can do then is use a service like disqus in order to present a comment section inside an iframe. This is one among other solutions to provide a comment section for your blog. There are of course also other ways like Facebook has a thing where you can add a comment section using it. There are also some fancy unusual solutions like using a certain [Mastodon post as a comment section](https://www.kylereddoch.me/2023/02/13/adding-mastodon-comments-jekyll-blog.html) which I read about when I searched for another post about how to make a [Mastodon share button](https://www.kylereddoch.me/2023/02/20/creating-mastodon-share-button.html) and both of these posts are extremely interesting and I recommend reading them.
 

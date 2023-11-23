@@ -2,6 +2,12 @@
 layout: post
 title: Making a sitemap XML in Liquid
 date: 2023-11-08 09:59:05 +0100
+tags:
+- liquid
+- jekyll
+- sitemap
+- xml
+- seo
 ---
 Decided to make a sinple sitemap generator using Liquid that is a part of jekyll. it is a template language that lets you do quite a few things like you can generate quite a few different data formats using it and it supports iterations and variables and such.
 

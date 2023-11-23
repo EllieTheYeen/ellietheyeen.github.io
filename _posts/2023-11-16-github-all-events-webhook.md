@@ -2,6 +2,11 @@
 layout: post
 title: How to subscribe to all GitHub events through WebHooks
 date: 2023-11-16 09:17
+image: /images/discordhookexample.png
+tags:
+- php
+- webhooks
+- github
 ---
 So you might have noticed that on every repository on your GitHub you are able to put a webhook url that gets called whenever an event happens. To put a webhook on every project and then put on every new project can be an annoyance and what if I told you there is a way to subscribe to every single repository event on your GitHub projects?
 

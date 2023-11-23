@@ -2,6 +2,10 @@
 layout: post
 date:   2023-11-02 13:42:03 +0100
 title:  Python sched module and rescheduling
+tags:
+- python
+- sched
+- concurrency
 ---
 Lets say you have some code that is waiting for a state to settle and you want to be able to make sure it really settles before trying to do anything with it. Or maybe you want to make a simple [Watchdog timer](https://en.wikipedia.org/wiki/Watchdog_timer) or [Dead man's switch](https://en.wikipedia.org/wiki/Dead_man%27s_switch) mechanism. You can look at the Python built in module `sched`.
 

@@ -1,6 +1,10 @@
 ---
 title: How to create a blog with Jekyll and GitHub Pages
 date: 2023-10-30 04:58:28 +0100
+tags:
+- github
+- jekyll
+- liquid
 ---
 
 GitHub pages is a free and quite easy way to set up a free website. It comes with many fun features like many themes you can install. What it supports is jekyll which allows you to automatically have GitHub build the HTML files for you using markdown. There are also many plugins such as [Jekyll-Feed](https://github.com/jekyll/jekyll-feed) that create a RSS XML file for you

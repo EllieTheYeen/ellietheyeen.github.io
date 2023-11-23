@@ -2,6 +2,9 @@
 layout: post
 title: Compact exception printing in Python
 date: 2023-11-11 18:50
+tags:
+- python
+- exceptions
 ---
 So recently I had the problem of something throwing exceptions and it was like really long exceptions that went way over 4 kilobytes of text which was hard to find something useful inside. So what was needed is something that made the exceptions much easier to see and to know the messages and the type rather than the 20+ files the stacktrace went through. At first this was a tough problem that maybe the stacktrace maybe had a solution to until the following was discovered. Apparently Python exceptions have two different attributes called `__cause__` and `__context__`. What they do is they tell you what the previous exception was but they are sligthly different. `__cause__` is only set if there was something like
 ```python

@@ -2,6 +2,10 @@
 layout: post
 date:   2023-10-31 01:22:41 +0200
 title:  Previewing of 3D models on GitHub
+tags:
+- github
+- jekyll
+- gist
 ---
 Was trying to figure out how to actually preview 3D models on GitHub and found out a few things.
 

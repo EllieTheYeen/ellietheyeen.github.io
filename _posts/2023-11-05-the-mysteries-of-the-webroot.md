@@ -1,6 +1,10 @@
 ---
 title: The mysteries of the web root
 date: 2023-11-05 03:18:22 +0100
+tags:
+- seo
+- html
+- robots.txt
 ---
 There are many files in the web root folder that is used for many different things that are often automatically grabbed by either bots or your browser. Here is a list of various things I have used and read about.
 

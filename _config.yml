@@ -14,3 +14,12 @@ relative_links:
 
 include: [".well-known"]
 timezone: Europe/Stockholm
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      image: https://github.com/EllieTheYeen.png
+      twitter:
+        card: "summary"

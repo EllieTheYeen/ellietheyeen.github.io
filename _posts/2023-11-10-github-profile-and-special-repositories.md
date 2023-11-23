@@ -2,6 +2,8 @@
 layout: post
 title: GitHub profile and other special repositories
 date: 2023-11-10 13:16 +0100
+tags:
+- github
 ---
 
 GitHub has 3 special repositories each user or organization can have which does special things if created. The 3 of these are `username` that should have the same name as your username, `.github` and `username.github.io` where username should be your username in lowercase. These have various useful features that are very useful if you use GitHub a lot.
