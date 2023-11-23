@@ -5,6 +5,9 @@ date: 2023-11-16 09:17
 ---
 So you might have noticed that on every repository on your GitHub you are able to put a webhook url that gets called whenever an event happens. To put a webhook on every project and then put on every new project can be an annoyance and what if I told you there is a way to subscribe to every single repository event on your GitHub projects?
 
+* 
+{:toc}
+
 What you first want to do is go to go to the developer settings on GitHub and create an application if you do not already have one.  
 <https://github.com/settings/apps>  
 Next you need to fill in an app name and this can be anything really. In Homepage URL just put the URL of your website. Now scroll down to the webhook section and enter your webhook URL which is whatever webhook you set up for your app and press active. This is compatible with the webhooks you put on respositories. Unless you intend to have many users there is no more you need to fill in here so press save.

@@ -5,8 +5,10 @@ date: 2023-10-30 04:58:28 +0100
 
 GitHub pages is a free and quite easy way to set up a free website. It comes with many fun features like many themes you can install. What it supports is jekyll which allows you to automatically have GitHub build the HTML files for you using markdown. There are also many plugins such as [Jekyll-Feed](https://github.com/jekyll/jekyll-feed) that create a RSS XML file for you
 
-
 At first we are going to look at various directories and files that need or is good if exists in order for this to function properly.
+
+* 
+{:toc}
 
 ## _posts
 This directory is used by jekyll-feed to store individual posts.

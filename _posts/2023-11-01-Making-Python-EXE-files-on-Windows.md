@@ -5,6 +5,9 @@ title:  Making Python EXE files on Windows
 ---
 So sometimes you have certain Windows programs that do not really want to take many arguments and want just a single exe file to point at. A good example of this is protocol handlers or just general command line programs for when you do not use tools like cygwin currently.
 
+* 
+{:toc}
+
 A protocol handler is a thing in Windows that when you want to open a certain kind of external protocol on a certain URL or alike. The most obvious example is the http protocol used for websites. There are many more for example for IRC like you might have a protocol handler in register that opens IRC when you enter IRC links starting with irc: in the run menu `win + r` or in the browser and an example of one that runs kvirc is below exported from Regedit
 ```ini
 Windows Registry Editor Version 5.00

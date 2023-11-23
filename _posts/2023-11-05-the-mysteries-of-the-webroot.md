@@ -9,7 +9,8 @@ A command like this ran in your `/var/log/apache2` can be used to find all kinds
 cat *.gz | gunzip | grep -o -P '(GET|POST) [^ ]+' | sort | uniq
 ```
 
-
+* 
+{:toc}
 
 ## index.html
 This is a common file to exist here. There might be all kinds of index. files such as `index.php` and even [index.json](https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/.well-known/webfinger/index.json).

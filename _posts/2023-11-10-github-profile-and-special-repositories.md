@@ -6,6 +6,9 @@ date: 2023-11-10 13:16 +0100
 
 GitHub has 3 special repositories each user or organization can have which does special things if created. The 3 of these are `username` that should have the same name as your username, `.github` and `username.github.io` where username should be your username in lowercase. These have various useful features that are very useful if you use GitHub a lot.
 
+* 
+{:toc}
+
 ## username (Your profile)
 This should have the same name as your username and if a `README.md` exists in this it will appear on the top of your profile.
 An example of this in action is [my own profile](https://github.com/EllieTheYeen) where you will see a small bio.

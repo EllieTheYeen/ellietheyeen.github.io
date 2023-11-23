@@ -8,6 +8,9 @@ What you will be adding if you press yes is that you are able to have a search e
 
 What we will be focusing on today tho is how to add a search engine in many different ways to Firefox and Chrome.
 
+* 
+{:toc}
+
 ## Basic
 There are some basic ways to add a search engine to your browser that is quite easy if you just want to be able to search websites and use them this is some good things to know about how you use search engines in your browser.
 

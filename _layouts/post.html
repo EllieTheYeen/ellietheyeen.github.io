@@ -2,12 +2,10 @@
 layout: base
 ---
 
-<small>{{ page.date | date: "%-d %B %Y" }}</small>
-
 {{ content }}
 
 *Mweeoops* <br />
-<p class="view">by {{ page.author | default: site.author }}</p>
+<p class="view">by {{ page.author | default: site.author }} {{ page.date | date: "%-d %B %Y" }} <a href="{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}" title="Permalink" style="color: #00dd00">Permalink</a></p>
 
 {% include share.html %}
 

@@ -1,17 +1,69 @@
 <div id="share">
     Share on
-    <a class="sharelink"
+    <a class="sharelink" title="Share this on Tumblr"
         href="https://www.tumblr.com/widgets/share/tool?posttype=link&canonicalUrl={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}&title={{ page.title | uri_escape }}&caption=&content=&tags=">
-        <span class="sharebutton" style="background-color: #34465D;">Tumblr</span>
+        <span class="btn" style="background-color: #34465D;">Tumblr</span>
     </a>
-    <a class="sharelink"
+
+    <a class="sharelink" title="Share this on Twitter"
         href="https://twitter.com/intent/tweet?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}&text={{ page.title | uri_escape }}">
-        <span class="sharebutton" style="background-color: #08a0e9;">Twitter</span>
+        <span class="btn" style="background-color: #08a0e9;">Twitter</span>
     </a>
-    <span class="sharebutton" style="background-color: #6260fa;" onclick="mastodon_modal()">Mastodon</span>
-    <a class="sharelink"
+
+    <a href="javascript:void" title="Share this on Mastodon"><span class="btn" style="background-color: #6260fa;"
+            onclick="mastodon_modal()">Mastodon</span></a>
+
+    <a class="sharelink" title="Share this on Reddit"
+        href="https://reddit.com/submit?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}&title={{ page.title | uri_escape }}">
+        <span class="btn" style="background-color: #ff4500;">Reddit</span></a>
+
+    <a class="sharelink" title="Share this on Facebook"
+        href="https://www.facebook.com/sharer.php?u={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}">
+        <span class="btn" style="background-color: #4267B2;">Facebook</span></a>
+
+    <a class="sharelink" title="Share this on Pinterest"
+        href="http://pinterest.com/pin/create/link/?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}&media=https://github.com/EllieTheYeen.png&description={{ page.title | uri_escape }}">
+        <span class="btn" style="background-color: #cc2127;">Pinterest</span>
+    </a>
+
+    <a class="sharelink" title="Share this on Telegram"
+        href="https://telegram.me/share/url?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}">
+        <span class="btn" style="background-color: #27a6e7;">Telegram</span>
+    </a>
+
+    <a class="sharelink" title="Share this on Ycombinator"
+        href="https://news.ycombinator.com/submitlink?u={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}&t={{ page.title | uri_escape }}">
+        <span class="btn" style="background-color: #cc5200;">Ycombinator</span>
+    </a>
+
+    <a class="sharelink" title="Share this on Wordpress"
+        href="https://wordpress.com/post/?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}">
+        <span class="btn" style="background-color: #444140;">Wordpress</span>
+    </a>
+
+    <a class="sharelink" title="Share this on Instapaper"
+        href="https://www.instapaper.com/edit?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}">
+        <span class="btn" style="background-color: #828181;">Instapaper</span>
+    </a>
+
+    <a class="sharelink" title="Share this on Pinboard"
+        href="https://pinboard.in/add?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}">
+        <span class="btn" style="background-color: #1120ab;">Pinboard</span>
+    </a>
+
+    <a class="sharelink" title="Share this on Pocket"
+        href="https://getpocket.com/edit?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}">
+        <span class="btn" style="background-color: #e0264b;">Pocket</span>
+    </a>
+
+    <a class="sharelink" title="Share this on GMail"
+        href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&body={{ page.title | uri_escape }}%0A{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}%0A">
+        <span class="btn" style="background-color: #ea4235;">GMail</span>
+    </a>
+
+    <a class="sharelink" title="Share this through email"
         href="mailto:?subject={{ page.title | uri_escape }}&body={{ page.title | uri_escape }}%0A{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}%0A">
-        <span class="sharebutton" style="background-color: #26BF74;">Email</span>
+        <span class="btn" style="background-color: #26BF74;">Email</span>
     </a>
 </div>
 <dialog id="mastodon_modal">

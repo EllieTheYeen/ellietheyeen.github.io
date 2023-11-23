@@ -5,6 +5,9 @@ title:  Previewing of 3D models on GitHub
 ---
 Was trying to figure out how to actually preview 3D models on GitHub and found out a few things.
 
+* 
+{:toc}
+
 ## Non code files
 Github has a way of allowing certain files to be previewed in fancy ways even in Gists for filetypes that are not technically code <https://docs.github.com/en/repositories/working-with-files/using-files/working-with-non-code-files> and you can also use this to preview files from GitHub on your own website using their embedder.
 
