@@ -36,11 +36,6 @@
         <span class="btn" style="background-color: #cc5200;">Ycombinator</span>
     </a>
 
-    <a class="sharelink" title="Share this on Wordpress"
-        href="https://wordpress.com/post/?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}">
-        <span class="btn" style="background-color: #444140;">Wordpress</span>
-    </a>
-
     <a class="sharelink" title="Share this on Instapaper"
         href="https://www.instapaper.com/edit?url={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}">
         <span class="btn" style="background-color: #828181;">Instapaper</span>
@@ -59,6 +54,11 @@
     <a class="sharelink" title="Share this on GMail"
         href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&body={{ page.title | uri_escape }}%0A{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}%0A">
         <span class="btn" style="background-color: #ea4235;">GMail</span>
+    </a>
+
+    <a class="sharelink" title="Share this on Blogger"
+        href="https://www.blogger.com/blog_this.pyra?n={{ page.title | uri_escape }}%0A{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}%0A">
+        <span class="btn" style="background-color: #ff5722;">Blogger</span>
     </a>
 
     <a class="sharelink" title="Share this through email"
