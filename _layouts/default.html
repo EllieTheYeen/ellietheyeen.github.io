@@ -21,11 +21,11 @@
 
         <section id="downloads">
           <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-          {% for page in site.pages %}
-            {% if page.showontop %}
+          {%- for page in site.pages -%}
+            {%- if page.showontop -%}
           <a href="{{ page.url }}" class="btn">{{ page.title }}</a>
-            {% endif %}
-          {% endfor %}
+            {%- endif -%}
+          {%- endfor -%}
         </section>
       </div>
     </header>
@@ -35,5 +35,6 @@
         {{ content }}
       </section>
     </div>
+    <script src="{{ site.url }}{{ site.baseurl }}/assets/js/script.js" ></script>
   </body>
 </html>

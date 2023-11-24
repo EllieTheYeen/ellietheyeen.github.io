@@ -1,7 +1,7 @@
 <div id="share">
     Share on
 
-    <a href="javascript:void" title="Share this on Mastodon">
+    <a title="Share this on Mastodon">
         <span class="btn" style="background-color: #6260fa;" onclick="mastodon_modal()">Mastodon</span></a>
 
     {% for butt in site.sharebuttons %}
@@ -12,40 +12,17 @@
     {% endfor %}
 
 </div>
+
 <dialog id="mastodon_modal">
     <button onclick="mastodon_modal(true)">Close</button><br />
     Instance: <input id="mast_inst" name="mastodon" oninput="mastodon_share()" type="text"
         placeholder="toot.cat" /><br />
     <a id="mastodon_share" class="sharelink" target="_blank">
-        <span class="sharebutton" style="background-color: #6260fa;">Share</span>
+        <span class="sharebutton btn" style="background-color: #6260fa;">Share</span>
     </a>
 </dialog>
+
 <script>
-    function mastodon_modal(hide = false) {
-        var mast_modal_elem = document.getElementById("mastodon_modal")
-        if (hide || mast_modal_elem.open) {
-            mast_modal_elem.close()
-        } else {
-            mast_modal_elem.show()
-        }
-        //mast_modal_elem.style.display = (hide || mast_modal_elem.style.display === "block") ? "none" : "block"
-    }
-    function mastodon_share() {
-        var inst_e = document.getElementById("mast_inst")
-        var inst = inst_e.value
-        if (inst.length === 0) {
-            inst = "toot.cat"
-        }
-        if (inst.search(/https?/) !== 0) {
-            inst = "https://" + inst
-        }
-        if (inst.substr(inst.length - 1) === "/") {
-            inst = inst.substr(0, inst.length - 1)
-        }
-        var text = `${document.URL}\n{{ page.title | escape }}\n`
-        var share = document.getElementById("mastodon_share")
-        share.href = `${inst}/share?text=${encodeURIComponent(text)}`
-    }
-    mastodon_share()
-    //document.addEventListener("click", () => mastodon_modal(true))
+    var thisid = "{{ page.id | slice: 1, 999 | replace: '/', '-' }}";
+    var mastsharetext = `${document.URL}\n{{ page.title | escape }}\n`
 </script>
