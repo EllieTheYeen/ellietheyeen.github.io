@@ -1,8 +1,7 @@
 <div id="share">
     Share on
 
-    <a title="Share this on Mastodon">
-        <span class="btn" style="background-color: #6260fa;" onclick="mastodon_modal()">Mastodon</span></a>
+    <span title="Share this on Mastodon" class="btn" style="background-color: #6260fa; cursor: pointer;" onclick="mastodon_modal()">Mastodon</span>
 
     {% for butt in site.sharebuttons %}
     <a class="sharelink" title="Share this on {{ butt.name }}" target="_blank"
