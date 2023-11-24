@@ -4,6 +4,7 @@ title: Automatic Git commit templates generator
 date: 2023-11-21 13:14
 tags:
 - python
+- shell
 - git
 ---
 Git has a feature where you are able to set a template message for every commit you do by specifying a file either in config or as a command line argument. This might not seem as useful on its own as it is a static message that appears every single time as a base for your commit message and does not allow any variables. There is however a thing you can do in order to change that.

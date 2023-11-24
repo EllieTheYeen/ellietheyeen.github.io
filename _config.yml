@@ -14,10 +14,10 @@ relative_links:
 
 include: [".well-known"]
 timezone: Europe/Stockholm
+paginate: 20
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       image: https://github.com/EllieTheYeen.png
