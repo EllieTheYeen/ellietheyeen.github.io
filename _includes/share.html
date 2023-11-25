@@ -10,7 +10,7 @@
     {%- if butt.title -%}
     {%- assign title = butt.title | append: '=' -%}
     {%- assign title = title | append: page.title | uri_escape -%}
-    {%- assign elems = title | split: '\n' | concat: elems -%}
+    {%- assign elems = elems | push: title -%}
     {%- endif -%}
 
     {%- if butt.body -%}
@@ -18,24 +18,24 @@
     {%- assign body = body | append: '%0A' -%}
     {%- assign body = body | append: 'https://ellietheyeen.github.io' | append: page.url | uri_escape -%}
     {%- assign body = body | '%0A' -%}
-    {%- assign elems = body | split: '\n' | concat: elems -%}
+    {%- assign elems = elems | push: body -%}
     {%- endif -%}
 
     {%- if butt.media -%}
     {%- assign media = butt.media | append: '=' -%}
     {%- assign mediaurl = page.image | absolute_url -%}
     {%- assign media = media | append: mediaurl -%}
-    {%- assign elems = media | split: '\n' | concat: elems -%}
+    {%- assign elems = elems | push: media -%}
     {%- endif -%}
 
     {%- if butt.url -%}
     {%- assign url = butt.url | append: '=' -%}
     {%- assign url = url | append: 'https://ellietheyeen.github.io' | append: page.url | uri_escape -%}
-    {%- assign elems = url | split: '\n' | concat: elems -%}
+    {%- assign elems = elems | push: url -%}
     {%- endif -%}
 
     {%- if butt.extra -%}
-    {%- assign elems = butt.extra | split: '\n' | concat: elems -%}
+    {%- assign elems = elems | push: butt.extra -%}
     {%- endif -%}
 
     <a class="sharelink" title="Share this on {{ butt.name }}" target="_blank"
