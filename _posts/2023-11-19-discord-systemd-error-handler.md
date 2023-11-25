@@ -10,7 +10,14 @@ tags:
 ---
 Did you know that systemd allows you to create special units that run only when other units fail and that they can be used to send notifications when services go down. Now we are going to look at how that would be done using Discord using Webhooks. In the screenshot below is an example of a message generated using this method that uses a Discord embed with a custom profile picture.
 
-![A Discord message from a bot named systemd at 10:01 with the systemd logo that is green square and triangle inside black square brackets. There is a red embed with the title: Service justfail.service failed and description: × justfail.service - This will just fail newline      Loaded: loaded (/home/pi/.config/systemd/user/justfail.service; static) newline      Active: failed (Result: exit-code) since Sun 2023-11-19 10:01:44 CET; 567ms ago newline     Process: 27410 ExecStart=sh -c echo fail; exit 1 (code=exited, status=1/FAILURE) newline    Main PID: 27410 (code=exited, status=1/FAILURE) newline         CPU: 11ms](/images/discordsystemd.png)
+[![
+A Discord message from a bot named systemd at 10:01 with the systemd logo that is green square and triangle inside black square brackets. There is a red embed with the title: Service justfail.service failed and description: × justfail.service - This will just fail 
+      Loaded: loaded (/home/pi/.config/systemd/user/justfail.service; static) 
+      Active: failed (Result: exit-code) since Sun 2023-11-19 10:01:44 CET; 567ms ago 
+     Process: 27410 ExecStart=sh -c echo fail; exit 1 (code=exited, status=1/FAILURE) 
+    Main PID: 27410 (code=exited, status=1/FAILURE) 
+         CPU: 11ms
+](/images/discordsystemd.png)](/images/discordsystemd.png)
 
 In order to start you want to use a command like the following in order to create or edit the unit we need in order for this to work.  
 `systemctl --user edit --full --force servicefailure@.service`  

@@ -5,7 +5,7 @@
 
     {% for butt in site.sharebuttons %}
     <a class="sharelink" title="Share this on {{ butt.name }}" target="_blank"
-        href="{{ butt.base }}?{%- if butt.extra -%}{{ butt.extra }}{%- endif -%}{%- if butt.url -%}&{{ butt.url }}={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}{%- endif -%}{%- if butt.title -%}&{{ butt.title }}={{ page.title | uri_escape }}{%- endif -%}{%- if butt.body -%}&{{ butt.body }}={{ page.title | uri_escape }}%0A{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}%0A{%- endif -%}{%- if butt.media -%}&{{ butt.media }}={{ site.defaultmedia }}{%- endif -%}">
+        href="{{ butt.base }}?{%- if butt.extra -%}{{ butt.extra }}{%- endif -%}{%- if butt.url -%}&{{ butt.url }}={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}{%- endif -%}{%- if butt.title -%}&{{ butt.title }}={{ page.title | uri_escape }}{%- endif -%}{%- if butt.body -%}&{{ butt.body }}={{ page.title | uri_escape }}%0A{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}%0A{%- endif -%}{%- if butt.media -%}&{{ butt.media }}={{ page.image | absolute_url }}{%- endif -%}">
         <span class="btn" style="background-color: {{ butt.color }};">{{ butt.name }}</span>
     </a>
     {% endfor %}
