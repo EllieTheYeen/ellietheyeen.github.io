@@ -1,11 +1,45 @@
 <div id="share">
     Share on
 
-    <span title="Share this on Mastodon" class="btn" style="background-color: #6260fa; cursor: pointer;" onclick="mastodon_modal()">Mastodon</span>
+    <span title="Share this on Mastodon" class="btn" style="background-color: #6260fa; cursor: pointer;"
+        onclick="mastodon_modal()">Mastodon</span>
 
     {% for butt in site.sharebuttons %}
+    {%- assign elems = "" | split: "" -%}
+
+    {%- if butt.title -%}
+    {%- assign title = butt.title | append: '=' -%}
+    {%- assign title = title | append: page.title | uri_escape -%}
+    {%- assign elems = title | split: '\n' | concat: elems -%}
+    {%- endif -%}
+
+    {%- if butt.body -%}
+    {%- assign body = butt.body | append: '=' -%}
+    {%- assign body = body | append: '%0A' -%}
+    {%- assign body = body | append: 'https://ellietheyeen.github.io' | append: page.url | uri_escape -%}
+    {%- assign body = body | '%0A' -%}
+    {%- assign elems = body | split: '\n' | concat: elems -%}
+    {%- endif -%}
+
+    {%- if butt.media -%}
+    {%- assign media = butt.media | append: '=' -%}
+    {%- assign mediaurl = page.image | absolute_url -%}
+    {%- assign media = media | append: mediaurl -%}
+    {%- assign elems = media | split: '\n' | concat: elems -%}
+    {%- endif -%}
+
+    {%- if butt.url -%}
+    {%- assign url = butt.url | append: '=' -%}
+    {%- assign url = url | append: 'https://ellietheyeen.github.io' | append: page.url | uri_escape -%}
+    {%- assign elems = url | split: '\n' | concat: elems -%}
+    {%- endif -%}
+
+    {%- if butt.extra -%}
+    {%- assign elems = butt.extra | split: '\n' | concat: elems -%}
+    {%- endif -%}
+
     <a class="sharelink" title="Share this on {{ butt.name }}" target="_blank"
-        href="{{ butt.base }}?{%- if butt.extra -%}{{ butt.extra }}{%- endif -%}{%- if butt.url -%}&{{ butt.url }}={{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}{%- endif -%}{%- if butt.title -%}&{{ butt.title }}={{ page.title | uri_escape }}{%- endif -%}{%- if butt.body -%}&{{ butt.body }}={{ page.title | uri_escape }}%0A{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}%0A{%- endif -%}{%- if butt.media -%}&{{ butt.media }}={{ page.image | absolute_url }}{%- endif -%}">
+        href="{{ butt.base }}?{{ elems | join: '&' }}">
         <span class="btn" style="background-color: {{ butt.color }};">{{ butt.name }}</span>
     </a>
     {% endfor %}
