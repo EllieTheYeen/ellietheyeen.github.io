@@ -14,7 +14,6 @@ We are going to look at a simple extension to pin images from the context menu a
 2. An icon or a few to be used in different parts of the extension such as a favicon
 3. Some code file that is JavaScript to contain the actual code and it can be more than one
 
-
 Here is an example of a manifest file for the addon that lets you click on images and pin them as tabs. As you see it specifies where to find other files such as the icon and the script file and also what API's to use and as you can see here it specifies tabs and contextMenus which we will need for the extension. There are also other things such as the name and the manifest version and itnernal version of the extension which is good for debugging published extensions.
 ```json
 {
