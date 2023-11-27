@@ -22,9 +22,9 @@
 
       <section id="downloads">
         <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        {%- assign tops = site.pages | where: 'showontop', true -%}
+        {%- assign tops = site.pages | where: 'showontop', 'true' -%}
         {%- for top in tops %}
-        <a href="{{ page.url }}" class="btn">{{ top.title }}</a>
+        <a href="{{ top.url }}" class="btn">{{ top.title }}</a>
         {%- endfor -%}
       </section>
     </div>
