@@ -1,6 +1,7 @@
 ---
 layout: base
 title: Projects
+permalink: /projects.html
 showontop: true
 ---
 ## Targeter
