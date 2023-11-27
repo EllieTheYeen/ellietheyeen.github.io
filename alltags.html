@@ -1,0 +1,15 @@
+---
+layout: base
+title: Tags
+permalink: /tag/
+showontop: true
+---
+{%- assign tags = "" | split: "" -%}
+{%- for post in site.posts -%}
+{%- unless post.tags -%}{% break %}{% endunless -%}
+{%- assign tags = tags | concat: post.tags -%}
+{%- endfor -%}
+{%- assign tags = tags | uniq -%}
+{%- for tag in tags %}
+<a href="{{ site.baseurl | append: '/tag/' | append: tag | append: '/' }}"><span style="font-size: 50px;">{{ tag }}</span></a>
+{%- endfor -%}

@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- if page.title -%}
-    <h2 class="page-heading">{{ page.title }}</h2>
+<h2 class="page-heading">{{ page.title }}</h2>
 {%- endif -%}
 
 {{ content }}
@@ -14,5 +14,6 @@ layout: default
     <a href="https://toot.cat/@DPSsys" target="_blank" rel="me" title="Mastodon account">Mastodon</a>
     <a href="https://yee.nu/" title="Website mostly with social media links">Website</a>
     <a href="/sitemap.xml" title="The XML sitemap">Sitemap</a>
-    <a href="{{ page.path | prepend: 'https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/' }}" title="Source of this page">Source</a>
+    <a href="{{ page.path | prepend: 'https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/' }}"
+        title="Source of this page">Source</a>
 </div>
