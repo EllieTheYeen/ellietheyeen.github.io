@@ -10,17 +10,8 @@ paginate: 20
 defaultmedia: https://github.com/EllieTheYeen.png
 
 plugins:
-  - jekyll-feed
-  - jekyll-archives
   - jekyll-relative-links
-
-jekyll-archives:
-  enabled:
-  - tags
-  layouts:
-    tag: archive
-  permalinks:
-    tag: '/tag/:name/'
+  - jekyll-feed
 
 relative_links:
   enabled: true
