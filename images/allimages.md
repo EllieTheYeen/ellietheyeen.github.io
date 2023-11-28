@@ -3,6 +3,11 @@ layout: base
 ---
 A file to make it easier to paste in images in VSCode and write alt text
 
+![
+A Thunderbird window showing one article that says "this is a test article where this is the first paragraph. a newline then A second paragraph.".
+The article is named test and has the subject Test and is by ellietheyeen at midnight and has a website URL that is /test/2023/11/28/test.html
+](/images/thunderbirdrss.png)
+
 [![
 An oEmbed icon 
 oEmbed title 
