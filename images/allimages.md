@@ -3,6 +3,43 @@ layout: base
 ---
 A file to make it easier to paste in images in VSCode and write alt text
 
+[![
+Do not
+](/images/image.png)](/images/image.png)
+
+[![
+XnView Mp with white background with a small top bar with some operation icons, a side bar with a tree of files, bottom left pans has info about the file like location, dates, histogram button, exiftool button, middle bottom pane has a bunch of categories where you can place an image in, bottom right pane is a preview one. Main pane has large icons that are previews of pictures and the folders have previews of the pictures inside of them and text files like python files have the Python logo on them
+](/images/xnviewmp.png)](/images/xnviewmp.png)
+
+[![
+Windows Explorer in dark mode showing a folder with many files and there is a bar to the left that shows various folders through quick access and dropbox and a computer icon each with many folders in them. The main window shows around 16 files with big icons with preview for the images. To the right is a preview of a poorly drawn snake that says mew among other things. There is a top bar too that lets you copy stuff and create folders and such.
+](/images/windowsexplorer.png)](/images/windowsexplorer.png)
+
+[![
+Xnview which is in light mode which has a top bar with many icons that are big for such things such as rotating images. It has a big browsing bar to the left that shows the current directory and nearby ones. The main window is split in two where the top is images that are clickable and the lower is a preview of the image which shows a shark anthro hand holding a big pill that says b
+](/images/xnview.png)](/images/xnview.png)
+
+[![
+Midnight commander which is command line and is showing two different sides which is browser the folder with white text for most things such as folders and blue for some like favicon.ico and grey for some other files. The top says left, file, command, options and right. The bottom bar says things like help, menu, view, edit, copy, renmov, mkdir, pulldwn and quit and has a line you can enter commands in and a text that says: Hint: Tab changes your current panel.
+](/images/midnightcommander.png)](/images/midnightcommander.png)
+
+[![
+Ytree which is A very simple file manager with blue background on command line showing just a few things like a file browser and a small window showing what files are in the selectred directory. A pane to the right shows some disk statistics like current size of disk and directory.
+](/images/ytree.png)](/images/ytree.png)
+
+[![
+Caja which is a simple file manager with white background showing a pane to the left that says computer and network and under that shows a few directories like music, downloads, desktop, pictures, trash and File system. The top pane shows a basic navigation with back and forward buttons and there is also a section where you can go down and up directories and see where you are and a button for each subdirectory and above directory. The main window had a small bar that says: 21 items, free space: 7.2 GB. The main window has icons where there is a note for music and a camera for pictures and such and the files also have icons like a picture of a paper for each and there are abunch of txt and sh files with that icon
+](/images/caja.png)](/images/caja.png)
+
+[![
+pcmanfm-qt which is mostly identical to Caja but more simplistic and has white background like there are just a few icons on left pane like desktop, trash, computer and applications, the top bare is minimalistic too with a few things like back and forward button and one button for each directory you are in. The main pane has icons like a previewed picture and the txt and similar files are seen as a pic of a paper icon and the shell files are seen as a black paper with a hashbang icon on it
+](/images/pcmanfm-qt.png)](/images/pcmanfm-qt.png)
+
+
+[![
+Nautilus which is an even more simplistic file manager with white background and the top bar that just has back and forward buttons and a bar that says home and a few more buttons, the left pane says stuff like documents, trash, downloads, videos, starred, recent and other locations with matching icons. The main pane has very large icons that looks like folders and papers and the pictures folder looks like a camera, music like a note and downloads like a downwards arrow
+](/images/nautilus.png)](/images/nautilus.png)
+
 ![
 A Thunderbird window showing one article that says "this is a test article where this is the first paragraph. a newline then A second paragraph.".
 The article is named test and has the subject Test and is by ellietheyeen at midnight and has a website URL that is /test/2023/11/28/test.html
