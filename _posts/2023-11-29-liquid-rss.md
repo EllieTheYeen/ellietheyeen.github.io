@@ -72,16 +72,16 @@ Using this information we can make our own template using Liquid (And pretyt muc
 <author>
 <name>{{ site.author }}</name>
 </author>
-{# You can put what filter you want here #}
+{% comment You can put what filter you want here %}{% endcomment %}
 {%- assign articles = site.posts | where: "category", "test" -%}
 {%- for a in articles -%}
 {%- if a == page -%}{%- continue -%}{%- endif -%}
-{#
+{% comment
                      ^ ^ ^ ^ ^ ^ ^ ^ 
 To prevent accidents where Jekyll crashes due to infinite loop due to it trying to access itself
 
 We also want only articles with set dates since otherwise it would be hard to get a RSS feed functioning good
-#}
+%}{% endcomment %}
 {%- unless a.date -%}{%- continue -%}{%- endunless -%}
 <entry>
 <title type="html">{{ a.title | escape }}</title>

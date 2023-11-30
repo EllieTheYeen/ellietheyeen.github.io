@@ -2,7 +2,7 @@ theme: jekyll-theme-hacker
 title: YeenDeer softness blog
 author: ellietheyeen
 description: >-
-  Ellie the Yeen is a soft YeenDeer and mweeoops
+  Ellie the Yeen is a soft YeenDeer that mweeoops and does programming
 
 include: [".well-known"]
 timezone: Europe/Stockholm
