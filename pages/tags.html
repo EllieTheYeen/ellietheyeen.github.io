@@ -1,0 +1,23 @@
+---
+layout: base
+title: Tags
+permalink: /tags.html
+showontop: true
+---
+{%- assign tags = "" | split: "" -%}
+{%- for post in site.posts -%}
+{%- unless post.tags -%}{% break %}{% endunless -%}
+{%- assign tags = tags | concat: post.tags -%}
+{%- endfor -%}
+{%- assign tags = tags | uniq | sort_natural -%}
+{%- for tag in tags %}
+<a href="#{{ tag }}"><span style="font-size: 50px;">{{ tag }}</span></a>
+{%- endfor %}
+
+{% for tag in tags %}
+<a name="{{ tag }}"></a>
+<h2>{{ tag }}</h2>
+{%- for post in site.tags[tag] %}
+<p><a href="{{ post.url }}">{{ post.title }}</a></p>
+{%- endfor %}
+{% endfor -%}

@@ -7,7 +7,18 @@ layout: base
 <p>*<span style="color: #ff1526">Mwee</span><span style="color: #1712ff">oops</span>*</p>
 
 {% include relatedposts.html %}
-<p class="view">by {{ page.author | default: site.author }} {{ page.date | date: "%-d %B %Y" }} <a href="{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}" title="Permalink" style="color: #00dd00">Permalink</a></p>
+<p class="view">by {{ page.author | default: site.author }} {{ page.date | date: "%-d %B %Y" }}
+    <a href="{{ 'https://ellietheyeen.github.io' | append: page.url | uri_escape }}" title="Permalink"
+        style="color: #00dd00">Permalink</a>
+    {% assign tags = page.tags -%}
+    {%- if tags -%}
+    {%- assign tags = tags | sort -%}
+    Tags:
+    {%- for tag in tags %}
+    <a href="/tags.html#{{tag}}">{{ tag }}</a>
+    {%- endfor -%}
+    {%- endif %}
+</p>
 
 {% include share.html %}
 {% include comments.html %}
