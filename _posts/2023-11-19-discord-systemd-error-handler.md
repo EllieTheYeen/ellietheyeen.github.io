@@ -21,7 +21,9 @@ A Discord message from a bot named systemd at 10:01 with the systemd logo that i
 
 In order to start you want to use a command like the following in order to create or edit the unit we need in order for this to work.  
 `systemctl --user edit --full --force servicefailure@.service`  
-This command will edit a user systemd unit and if it does not exist it will create it if saved. We of course need to fell the unit service file in order for it to run and also have it end with an at sign un order to make this kind of unit. Below is an example of this kind of unit file that runs a Python script whenever the unit is started and also sends an arument to that script in order for it to know what unit had a failure.
+This command will edit a user systemd unit and if it does not exist it will create it if saved. We of course need to fell the unit service file in order for it to run and also have it end with an at sign un order to make this kind of unit. Below is an example of this kind of unit file that runs a Python script whenever the unit is started and also sends an argument to that script in order for it to know what unit had a failure.
+
+`~/.config/systemd/user/servicefailure@.service`
 ```ini
 [Unit]
 Description=Failure handler for %i
@@ -31,6 +33,8 @@ Type=oneshot
 ExecStart=/home/pi/.cron/servicefailure/servicefailure.py %i
 ```
 This needs to point at an existing Python script which you can place where you want as long as the user has access to it and it is marked as executable and has the proper interpreter pointed at. We use Python for this as it is a popular language that suits well for that task but this could be completely done in dash, Ruby or even PHP if you wanted. The following file is the one that should be pointed at by the unit file and it receives an argument that it uses in order to fetch the status from systemd and then sends that using a Discord WebHook to Discord with some embed formatting.
+
+`~/.cron/servicefailure/servicefailure.py`
 ```py
 #!/usr/bin/python3
 import subprocess
@@ -68,6 +72,8 @@ d = requests.post(hook, json=o, params=dict(wait="true"))
 print(d.text)
 ```
 When this is ready and you have configured it correctly there is just one step left in order to to make use of this. We have to point services that when they fail should start our error handler unit and you can do this on every single unit as long as it is the same user or system wide but then you should not use the `--user argument`. Yes you can in fact make this tell on Discord if your Discord bot goes down as webhooks are not dependent on a specific Discord bot being online.
+
+`~/.config/systemd/user/discordbot.service`
 ```ini
 [Unit]
 Description=Discord bot

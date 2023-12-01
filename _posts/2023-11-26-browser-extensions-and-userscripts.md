@@ -15,6 +15,8 @@ We are going to look at a simple extension to pin images from the context menu a
 3. Some code file that is JavaScript to contain the actual code and it can be more than one
 
 Here is an example of a manifest file for the addon that lets you click on images and pin them as tabs. As you see it specifies where to find other files such as the icon and the script file and also what API's to use and as you can see here it specifies tabs and contextMenus which we will need for the extension. There are also other things such as the name and the manifest version and itnernal version of the extension which is good for debugging published extensions.
+
+`manifest.json`
 ```json
 {
   "manifest_version": 3,
@@ -38,7 +40,9 @@ Here is an example of a manifest file for the addon that lets you click on image
   ]
 }
 ```
-As we have now specified the script file we are going to take a look at it. It creates a context menu and also has various code in order to compensate for issues that can happen when registering the context menu. The commented away code had some issues with it so it was removed. It is also sligthly different how Chrome and Firefox handles this.
+As we have now specified the script file we are going to take a look at it. It creates a context menu and also has various code in order to compensate for issues that can happen when registering the context menu. The commented away code had some issues with it so it was removed. It is also slightly different how Chrome and Firefox handles this.
+
+`app.js`
 ```js
 function onPin(a) {
 	var src = a.srcUrl
@@ -74,6 +78,8 @@ Here below should be a preview of the script if you want to take a look at it.
 {% gist 85776ad20218db29c7d33e12ce58be29 %}
 
 It can be very fun and also useful to make extensions and userscripts for your browser. There are many other things you can do such as if you just want to change color of an annoying element which you can do like the following.
+
+`tootcatblack.js`
 ```js
 // ==UserScript==
 // @name         TootcatBlack
@@ -89,6 +95,8 @@ GM.addStyle("textarea { background-color:#000 !important; color: #FFF !important
 ```
 
 Or maybe you want to stay away from the awful feed on Twitter by making so you are redirected back to notifications if for any reason you end up on the home feed.
+
+`notwitterfeed.js`
 ```js
 // ==UserScript==
 // @name         No feed

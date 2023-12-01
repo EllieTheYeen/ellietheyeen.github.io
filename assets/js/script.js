@@ -58,7 +58,7 @@ var load_mastodon = function () {
             await fetch(`https://toot.cat/api/v1/statuses/${thisarticle}/context`)
                 .then((d) => d.json())
                 .then((j) => {
-                    if (!j.descentants) {
+                    if (!j.descendants) {
                         info.textContent = "No comments"
                     }
                     var elem = document.getElementById("mastcomments");

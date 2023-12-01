@@ -194,4 +194,4 @@ I found quite a few share buttons here if you do not care about making your own
 
 Be very sure that you have your meta tags like open graph and others set up correctly since it is very useful for previews on other sites to work correctly. [Here is an article I wrote about that](https://ellietheyeen.github.io/2023/11/17/open-graph-oembed-order.html) and also make sure random robots can read the `robots.txt` for preview it since they do obey it typically
 
-I would be extremely suprised if someone somehow managed to press all the buttons below
+I would be extremely surprised if someone somehow managed to press all the buttons below

@@ -56,6 +56,7 @@ Used to store the layouts and will be accessed whenever you do something like {%
 ## _config.yml
 This is the main config file for jekyll
 
+`_config.yml`
 ```yaml
 theme: jekyll-theme-hacker
 title: YeenDeer softness blog
@@ -76,6 +77,7 @@ This is a file used by Ruby's package manager Gem to find packages to install.
 You can install the packages inside it by writing `bundle install`.
 The code in this example is what I use to run my blog locally when updating
 
+`Gemfile`
 ```ruby
 source "https://rubygems.org"
 gem "jekyll-theme-midnight"
@@ -107,7 +109,9 @@ This is where generated site components will end up when they are generated. it 
 ## Other files
 You can have any file you want in the root directory and it will be processed by the [Liquid](https://shopify.github.io/liquid/) endinge and copied over to the _site directory.
 
-You can for example write a file named `listsposts.json` with the following content.
+You can for example write a file named `listposts.json` with the following content.
+
+`listposts.json` liquid
 ```liquid {% raw %}
 ---
 ---
@@ -118,7 +122,10 @@ You can for example write a file named `listsposts.json` with the following cont
   {% endfor %}
 } {% endraw %}
 ```
+
 And it might generate something like the following accessible on the web like `/listposts.json` with the following content.
+
+`listposts.json` rendered
 ```json
 {
     "How to create a blog with Jekyll and GitHub Pages": "https://ellietheyeen.github.io/2023/10/29/how-to-create-a-blog-with-jekyll.html"
@@ -144,7 +151,7 @@ Remember that a lot of files are placed there automatically like if you set a th
 If this is locally you tend to need to install the theme and put it in the `Gemfile`.
 
 ## How to actually post
-What you do when you want to make a post is create a new file in the _posts folder dated accordingly with and with at least the layout setting filled since otherwise there will be no loaded templates for your post. After that you just have to write whatever you want and when you are done you push to the `gh-pages` branch (As of now the main branch seens to work too if set up that way in repository settings) and GitHub will build it for you and update within a few seconds. You can use GitHub hooks to have things react to your blog being updated and act accordingly.
+What you do when you want to make a post is create a new file in the _posts folder dated accordingly with and with at least the layout setting filled since otherwise there will be no loaded templates for your post. After that you just have to write whatever you want and when you are done you push to the `gh-pages` branch (As of now the main branch seems to work too if set up that way in repository settings) and GitHub will build it for you and update within a few seconds. You can use GitHub hooks to have things react to your blog being updated and act accordingly.
 
 You should know a bit of markdown in order to make posts but that is something that is very easy to learn. You have perhaps used a chat service such as Discord which has support for markdown.
 

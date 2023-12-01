@@ -32,7 +32,8 @@ What if you want to implement the actual thing yourself like your own entire sea
 <https://developer.mozilla.org/en-US/docs/Web/OpenSearch>  
 <https://en.wikipedia.org/wiki/OpenSearch>  
 
-For this we need to craft an XML file in order for your browser to be able to use your search engine.
+For this we need to craft an XML file in order for your browser to be able to use your search engine.  
+`opensearch.xml`
 ```xml
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/"
     xmlns:moz="http://www.mozilla.org/2006/browser/search/">
@@ -54,6 +55,7 @@ For this we need to craft an XML file in order for your browser to be able to us
 
 Upload it to somewhere on your server where it is accessible by an URL.
 
+Part of `index.html`
 ```html
 <link rel="search" type="application/opensearchdescription+xml" title="example"
         href="http://example.com/opensearch.xml" />
@@ -69,6 +71,8 @@ There are probably fancy ways you can use this as make a certain search engine d
 
 ## Master
 What if you want to have your own search suggestions too like have everything the user types while having your search engine selected get sent to the server and them seeing a reply of different pages, posts, terms or such below their address bar as search suggestions. This is quite a fancy feature and can be hard to implement correctly. Below is some example code I made for usage in my CrossPoster that lets me search my own posts very efficiently but it is a rather simple example as there are many more features that could be added
+
+`searchsuggestions.php`
 ```php
 <?php
 header('Content-Type: application/x-suggestions+json'); # The suggestions type
@@ -113,6 +117,7 @@ echo json_encode([$sea, $b]);
 ```
 The code is in PHP and what it does is reply with JSON like the following whenever the user writes anything in the search bar with your engine selected.
 
+`response.json`
 ```json
 [
   "mwee",

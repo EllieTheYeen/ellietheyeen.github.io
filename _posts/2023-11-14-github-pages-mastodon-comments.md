@@ -19,6 +19,8 @@ There are a few issues that can come up if you try to post with actions as you d
 What we do to fix this chicken and egg problem is involve a third thing which is a gist that stores the blog ids and the mastodon ids together so they can be fetched easily for usage in the comment section. Once the gist is fetched we can check what mastodon id corresponds to the post id and fetch the comments from it.
 
 We are using an external thing for this right now even tho GitHub actions could technically be used where we use GitHub hooks. We start with defining a rule in [IOTReact](https://github.com/EllieTheYeen/IOTReact) that will run when we receive a GitHub hook JSON payload.
+
+Part of `iotreact/commands.py`
 ```py
 @listener(channel="aio.githubapphook")
 def githubapphook(c, p, m, redis):
@@ -57,6 +59,8 @@ def githubapphook(c, p, m, redis):
         blogrsstask = scheduler.enter(60, 1, fetchblogrss)
 ```
 As you see it waits until 60 seconds after the last complete message has been sent for the repository to prevent race conditions. It then runs a script that runs a RSS posting script through an error handler to be safe which I use for all my bots to log crashes and problems. I also had to write a simple scheduler in IOTReact for this which is shown below.
+
+Part of `iotreact/commands.py`
 ```py
 import threading, time, sched
 
@@ -79,6 +83,8 @@ except Exception:
     schedthread.start()
 ```
 The script that is started by this is a [RSS poster](https://ellietheyeen.github.io/2023/10/29/Making-a-simple-RSS-to-Mastodon-poster-powered-by-GitHub-hooks.html) that has quite a bit of new features since last posted about. It does a whole bunch of things like posts on Mastodon, updates the gist, then posts in a Discord channel and finally updated the index in [IndexNow](https://www.bing.com/indexnow). Below is the script that does all these things including parsing the RSS feed that is created by [jekyll-feed](https://github.com/jekyll/jekyll-feed).
+
+Part of `rss/rssposter.py`
 ```py
 def handleblogfeed(doc: bs):
     for d in doc.select("entry"):
@@ -114,6 +120,8 @@ def handleblogfeed(doc: bs):
         exit()
 ```
 This is what is started by the RSS poster and it updates the gist with the ids and matches them together.
+
+`updategist.sh`
 ```sh
 #!/usr/bin/zsh
 cd "$(dirname "$0")"
@@ -131,9 +139,10 @@ We might get some URL like this when we click raw
 `https://gist.githubusercontent.com/EllieTheYeen/d83b14c225c8233e9c458f9d3889442b/raw/9e6fe722b607121523e23aca7150847170257c55/posts.csv`  
 But we can correct it like this to always get the latest version  
 `https://gist.githubusercontent.com/EllieTheYeen/d83b14c225c8233e9c458f9d3889442b/raw/posts.csv`  
-and now we have a gist that is gradually updated and used to store publicly acessible data.
+and now we have a gist that is gradually updated and used to store publicly accessible data.
 
-The current content of the gist looks like the following
+The current content of the gist looks like the following  
+`posts.csv`
 ```csv
 MastodonID,BlogSlug
 111320221128722260,2023-10-27-blog
@@ -155,7 +164,8 @@ MastodonID,BlogSlug
 ```
 The Mastodon ids are first for easier formatting and readability.
 
-What we have next is a giant mess that actually fetches the gist, fetches the comments and renders them on the page when a button is pressed.
+What we have next is a giant mess that actually fetches the gist, fetches the comments and renders them on the page when a button is pressed.  
+Part of `_includes/comments.hhtml`
 ```javascript
 {% raw %}
 var thisid = "{{ page.id | slice: 1, 999 | replace: '/', '-' }}"
@@ -187,7 +197,7 @@ var load_mastodon = function () {
                 .catch((e) => document.getElementById("mastodon_thread").textContent = e)
                 .then((d) => d.json())
                 .then((j) => {
-                    if (!j.descentants) {
+                    if (!j.descendants) {
                         info.textContent = "No comments"
                     }
                     var elem = document.getElementById("mastcomments");
@@ -226,7 +236,8 @@ var load_mastodon = function () {
 ```
 It uses a Liquid template from Jekyll too as you see to get the proper id for the article to match it.
 
-What comes next was a giant pain as I am really not good at HTML and CSS but I managed to get a somewhat good format for the comments using the following CSS
+What comes next was a giant pain as I am really not good at HTML and CSS but I managed to get a somewhat good format for the comments using the following CSS  
+`style.css`
 ```css
 #mastcomments {
     display: grid;

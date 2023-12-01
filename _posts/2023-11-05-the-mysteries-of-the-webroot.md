@@ -61,6 +61,8 @@ A HUGE amount of robots will visit your website for all kinds of reasons. Here i
 
 ### Example of disallowing
 Below is an example of blocking 2 different ChatGPT related robots. The first one is to block the crawling bot and the second is to block the user operated bot and this was found at <https://www.furaffinity.net/robots.txt>
+
+Part of `robots.txt`
 ```robots
 User-agent: GPTBot
 Disallow: /

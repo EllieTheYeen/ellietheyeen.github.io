@@ -6,13 +6,15 @@ tags:
 - python
 - exceptions
 ---
-So recently I had the problem of something throwing exceptions and it was like really long exceptions that went way over 4 kilobytes of text which was hard to find something useful inside. So what was needed is something that made the exceptions much easier to see and to know the messages and the type rather than the 20+ files the stacktrace went through. At first this was a tough problem that maybe the stacktrace maybe had a solution to until the following was discovered. Apparently Python exceptions have two different attributes called `__cause__` and `__context__`. What they do is they tell you what the previous exception was but they are sligthly different. `__cause__` is only set if there was something like
+So recently I had the problem of something throwing exceptions and it was like really long exceptions that went way over 4 kilobytes of text which was hard to find something useful inside. So what was needed is something that made the exceptions much easier to see and to know the messages and the type rather than the 20+ files the stacktrace went through. At first this was a tough problem that maybe the stacktrace maybe had a solution to until the following was discovered. Apparently Python exceptions have two different attributes called `__cause__` and `__context__`. What they do is they tell you what the previous exception was but they are slightly different. `__cause__` is only set if there was something like
 ```python
 raise ValueError("Something wrong") from e
 ```
 while `__context__` is always set as long as a previous exception is there and otherwise it will be None.
 
 So what had to be done not was to iterate over every `__context__` until none and for every iteration check if `__cause__` was set and use that data to do something useful like provide an useful printout of what went wrong without it being extremely long like `traceback.format_exc` is at time. So here is the code that managed to provide a compact representation of what went wrong.
+
+`compacttrace.py`
 ```python
 def compacttrace(exc: Exception, maxamount: int = 100):
     out = []
@@ -54,7 +56,8 @@ Now we can simply just send this to Discord or Slack or any other chat service t
 
 There are probably other things that could be done like adding a line number and a file to each exception as that is what could make it more useful in certain cases where several things could throw identical errors.
 
-So that is what I did with it and made another versions with line numbers.
+So that is what I did with it and made another versions with line numbers.  
+`compacttrace.py`
 ```python
 def compacttrace(exc: Exception, maxamount: int = 100):
     out = []

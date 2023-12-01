@@ -13,6 +13,8 @@ So sometimes you have certain Windows programs that do not really want to take m
 {:toc}
 
 A protocol handler is a thing in Windows that when you want to open a certain kind of external protocol on a certain URL or alike. The most obvious example is the http protocol used for websites. There are many more for example for IRC like you might have a protocol handler in register that opens IRC when you enter IRC links starting with irc: in the run menu `win + r` or in the browser and an example of one that runs kvirc is below exported from Regedit
+
+`protcolhandler.reg`
 ```ini
 Windows Registry Editor Version 5.00
 
@@ -43,7 +45,7 @@ Such things end up on Linux for example in one of these paths
 Of if you have anaconda on Windows it might and up at  
 `C:\Users\username\anaconda3\Scripts`
 
-What you need to make these programs are Python's internal packaging tools like setuptools (even tho that is mostly decrepated) or pip
+What you need to make these programs are Python's internal packaging tools like setuptools (even tho that is mostly deprecated) or pip
 
 Let's say we have the following files as used in this example project I made for this post: <https://github.com/EllieTheYeen/Mew>
 ```
@@ -56,6 +58,8 @@ setup.py
 ```
 Now we have two different options of how to install these  
 Either we can use the `pyproject.toml` that is used in the more modern packaging system you run with `pip install -e .`
+
+`pyproject.toml`
 ```toml
 [project]
 name = "mew"
@@ -76,6 +80,8 @@ build-backend = "setuptools.build_meta"
 mew = "mew.__main__:main"
 ```
 Or we can use the older setuptools `setup.py` that you run like `python setup.py install`
+
+`setup.py`
 ```python
 from setuptools import setup
 
@@ -86,7 +92,9 @@ setup(
     entry_points={"console_scripts": ["mew=mew.__main__"]},
 )
 ```
-Lets say we have some code here as `mew/__main__.py` we want to have inside an exe to run
+Lets say we have some code here we want to have inside an exe to run
+
+`mew/__main__.py`
 ```python
 import sys
 

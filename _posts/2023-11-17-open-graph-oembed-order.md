@@ -13,9 +13,11 @@ So when you paste a link into a social media site or a chat app a certain thing 
 * 
 {:toc}
 
-There are many apps and sites to consider as they all display the preview in a sligthly different way and as you want your website to look as impressive at possible probably want to know all the rules of how it works. Today we are going to focus on apps like Slack, Discord, Twitter, Bsky and Mastodon.
+There are many apps and sites to consider as they all display the preview in a slightly different way and as you want your website to look as impressive at possible probably want to know all the rules of how it works. Today we are going to focus on apps like Slack, Discord, Twitter, Bsky and Mastodon.
 
 In order to test this we need to specifically craft some HTML file for [OpenGraph](https://ogp.me/) and a JSON file for [oEmbed](https://oembed.com/) that makes it extremely obvious what is happening from the preview.
+
+`ogtest.html`
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +59,8 @@ But only a certain amount of characters are shown anyway" />
 ```
 This file is located at <https://randomness.nu/ogtest/> and has a bunch of different pictures and such in order to be able to identify what picture we get shown whenever the preview appears and the full link of it is <https://randomness.nu/ogtest/ogtest.html>.
 
-Here is the oEmbed JSON file
+Here is the oEmbed JSON file  
+`oembed.json`
 ```json
 {
     "author_name": "oEmbed author_name",
@@ -274,6 +277,7 @@ You can use this data to display different previews on different websites and al
 
 ## Redundancy
 From this we can conclude that the absolute minimum tags we should want to use are the following to get good previews on every site listed.
+
 ```html
 <title>put a title here</title>
 <meta name="og:title" content="put title again here" /> <!-- Will not preview at all on twitter otherwise -->
@@ -285,7 +289,7 @@ From this we can conclude that the absolute minimum tags we should want to use a
 <meta name="og:site_name" content="put website name here" /> <!-- for Discord if you want a site name shown -->
 <meta name="theme-color" content="#FFAAFF" /> <!-- Discord embed color -->
 ```
-Twitter as you can see is the main one causing issues as it does not follow standards very good and has quite some issues with understanding tags and requires special treatmeant unlike all of the others.
+Twitter as you can see is the main one causing issues as it does not follow standards very good and has quite some issues with understanding tags and requires special treatment unlike all of the others.
 
 On Twitter the meta tag can be set to the following too among other things like video players but this one displays an image large but hides all the other text in the preview and you can read about [Twitter cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/abouts-cards) for more info.
 ```html

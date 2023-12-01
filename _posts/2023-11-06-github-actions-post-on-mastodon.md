@@ -22,7 +22,7 @@ There are 3 files that are required to pull this of.
 3. The runnable file to be executed and do the actions
 It is possible to sort of do this in a single file but it can be very confusing code wise to do.
 
-Here is the `actions.yml` in the actions repository
+`.github/workflows/actions.yml`
 ```yml
 name: Mastodon Action Test
 description: 'A github action that tests if it can post to Mastodon and save the id'
@@ -62,6 +62,8 @@ inputs:
 Here various config is defined like how the Python script should run and what parameters should be used.
 
 Here is the configuration file that should be inside the target repository where Jekyll is installed so it runs and checks for new posts using the action that then posts. It should be placed at `.github/workflows/whatever.yml` and yes the yml file can have almost any name. You need to fill this out with your own config if you intend to use it. The secret token is stored elsewhere but referenced here.
+
+`.github/workflows/mastodonactiontest.yml`
 ```yml
 name: mastodonactiontest
 on:
@@ -90,6 +92,8 @@ jobs:
 ```
 
 Here in `action.py` is what code is actually is being run and doing the Mastodon posting. It uses the GitHub actions checkout and then checks for new posts files and if there are new ones it posts them on Mastodon assuming all the config is right and nothing goes wrong like the token being missing.
+
+`action.py`
 ```py
 #!/usr/bin/python3
 import urllib.request
@@ -205,4 +209,3 @@ This is something that we will likely continue to do something with like adding 
 Actions can be used to do a lot of things on GitHub like testing both on pushed and on pull requests or do builds or run bots like this whole post is about. I wonder what kinds of other fun things people have done with it especially unconventional things that are more for fun.
 
 Anyway feel free to use the code here for what you want as it is quite something that would be fun to see people using.
-

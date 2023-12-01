@@ -12,6 +12,8 @@ Git has a feature where you are able to set a template message for every commit 
 Here is what you can do. Make an alias for your git commit that will run a command every time you run it to fill in the message. There are a few ways to do this where one is something like `git commit --template <(somecommand)` however this has a certain issue if you write it like that. The problem comes when you try to exit the text editor that git opens it will still do a commit even if you do not change the message or save (Tell in comments if you actually know why since this is really interesting why it happens).
 
 There is a thing we can do to fix this. First we make a program to generate a fancy commit message and save to a file and second we make a program, script or alias that when git is run it is taking that file in as the template argument. Below is an example of a program that generates commit messages very similar to how GitHub does it automaticaly by listing the changed file and how it was changed.
+
+`makewgtemp`
 ```py
 #!/usr/bin/python3
 import subprocess
@@ -49,6 +51,8 @@ print("\n".join(out))
 # Save this file as makegwtemp somewhere in your path
 ```
 Now that We have a program that generates the commit message we need a second thing that is below that will run `git commit` with teh template argument set to the file.
+
+`gc`
 ```bash
 #!/bin/bash
 git status >/dev/null 2>&1
@@ -62,6 +66,8 @@ git commit --template gittemplate.txt "$@"
 rm gittemplate.txt
 ```
 Now if we run this it will start up nano with the following prefilled inside it and if we save it it will do the commit and we do not have to write out own commit messages.
+
+`.git/COMMIT_EDITMSG`
 ```sh
 Create _posts/2023-11-21-automatic-git-templates.md
 Update index.md

@@ -28,6 +28,8 @@ Remember these names are arbritrary but we need to define them in order for us t
 
 ## Configuration
 Now that we have defined what kind of fields exist we should define them in the configuration for the code to use. This is placed in `_config.yml` which is the Jekyll config but you can probably make your own solution if you are using another templating engine. As you see we define here what kind of share buttons we want to appear at the bottom of the page.
+
+`_config.yml`
 ```yml
 sharebuttons:
   - name: Tumblr
@@ -95,6 +97,8 @@ sharebuttons:
 
 ## The code
 Now for the actual code that generates the buttons we have this thing written in Liquid that generates an array using a quite strange method as there is no literal in Liquid in order to define an array. After that we can append whatever fields we want to the array using `push` and eventually join them together using `join`. We only use what fields are defined in the configuration and skip the other ones and the `base`, `name` and `color` parts are not put in the array as they belong in other places.
+
+Part of `_includes/share.html`
 ```liquid
 {%- raw -%}
 {% for butt in site.sharebuttons %}

@@ -9,7 +9,7 @@ tags:
 - xml
 - seo
 ---
-Decided to make a sinple sitemap generator using Liquid that is a part of jekyll. it is a template language that lets you do quite a few things like you can generate quite a few different data formats using it and it supports iterations and variables and such.
+Decided to make a simple sitemap generator using Liquid that is a part of jekyll. it is a template language that lets you do quite a few things like you can generate quite a few different data formats using it and it supports iterations and variables and such.
 
 [Liquid](https://shopify.github.io/liquid/) is a fun template language similar to [Jinja](https://jinja.palletsprojects.com/) that allows you to do many useful things and generate all kinds of website related things and it is not only limited to HTML either.
 
@@ -41,7 +41,8 @@ Content and any Liquid code here
 ```
 This makes it a very powerful language that is easy to write and read both by computers and programmers.
 
-Below is a template using Liquid that generates a sitemap that can be used by variour search engines and such. It should be placed at `sitemap.xml`.
+Below is a template using Liquid that generates a sitemap that can be used by various search engines and such.  
+`sitemap.xml` liquid
 {% raw %}
 ```xml
 ---
@@ -81,6 +82,8 @@ Below is a template using Liquid that generates a sitemap that can be used by va
 As you see it supports iteration and filters like append and date which is used for date formatting.
 
 This will then render into something approximately like this. Remember that the dates rendering is based on when the site is rendered which means the search engines will not constantly see the current date for pages. This can be good if there is a few extra things on some pages like links on the side that gets updated with interesting content. Some things are cut off from this as there are a lot of pages and there is one of the 3 categories each here
+
+`sitemap.xml` example
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
@@ -110,7 +113,9 @@ This will then render into something approximately like this. Remember that the 
 </urlset>
 ```
 
-The sitemap is then put inside the robots.txt that is also generated and search engines can find it inside. The template here should be placed in `robots.txt`
+The sitemap is then put inside the robots.txt that is also generated and search engines can find it inside.
+
+`robots.txt` liquid
 {% raw %}
 ```yml
 ---
@@ -120,7 +125,7 @@ Allow: /
 Sitemap: {{ site.url | append: site.baseurl }}/sitemap.xml
 ```
 {% endraw %}
-which renders into
+`robots.txt` rendered
 ```yml
 User-agent: *
 Allow: /
@@ -131,6 +136,8 @@ and will be reusable for other websites.
 It is however very recommended to submit your sitemaps to Bing and Google so they can scan them at times and you will be notified about potential issues just like you can do with RSS feeds.
 
 You can also use it to generate a makeshift [JSON](https://www.json.org/json-en.html) API to list all the posts on your Jekyll site which can be convenient since it is is easier to parse if you want to use it for bots or alike.
+
+`listposts.json` liquid
 {% raw %}
 ```liquid
 ---
