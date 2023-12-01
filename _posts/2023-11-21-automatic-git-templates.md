@@ -11,7 +11,7 @@ Git has a feature where you are able to set a template message for every commit 
 
 Here is what you can do. Make an alias for your git commit that will run a command every time you run it to fill in the message. There are a few ways to do this where one is something like `git commit --template <(somecommand)` however this has a certain issue if you write it like that. The problem comes when you try to exit the text editor that git opens it will still do a commit even if you do not change the message or save (Tell in comments if you actually know why since this is really interesting why it happens).
 
-There is a thing we can do to fix this. First we make a program to generate a fancy commit message and save to a file and second we make a program, script or alias that when git is run it is taking that file in as the template argument. Below is an example of a program that generates commit messages very similar to how GitHub does it automaticaly by listing the changed file and how it was changed.
+There is a thing we can do to fix this. First we make a program to generate a fancy commit message and save to a file and second we make a program, script or alias that when git is run it is taking that file in as the template argument. Below is an example of a program that generates commit messages very similar to how GitHub does it automatically by listing the changed file and how it was changed.
 
 `makewgtemp`
 ```py
@@ -85,4 +85,4 @@ Update index.md
 ```
 Now we can just enjoy the ease of not having to write commit messages for simple commits.
 
-Noticed later: So there are some issues with this like sometimes unless you make any form of change it will not add the commit. You can change this to make the whole thing use the `-m` parameter instead to set the whole commit message or you can make sure you do a small change each time. The third option is to use the `<(command)` syntac in order to make you have to delete the commit message in order to abort a commit.
+Noticed later: So there are some issues with this like sometimes unless you make any form of change it will not add the commit. You can change this to make the whole thing use the `-m` parameter instead to set the whole commit message or you can make sure you do a small change each time. The third option is to use the `<(command)` syntax in order to make you have to delete the commit message in order to abort a commit.

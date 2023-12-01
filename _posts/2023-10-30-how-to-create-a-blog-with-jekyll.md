@@ -104,10 +104,10 @@ Gemfile.lock
 A small picture that will be shown in the browser tab and it is really recommended to have one for people to recognize your blog among tabs. You can put any small picture there
 
 ## _site
-This is where generated site components will end up when they are generated. it is very inadvicable to write things here
+This is where generated site components will end up when they are generated. It is very inadvisable to write things here as they will be overwritten
 
 ## Other files
-You can have any file you want in the root directory and it will be processed by the [Liquid](https://shopify.github.io/liquid/) endinge and copied over to the _site directory.
+You can have any file you want in the root directory and it will be processed by the [Liquid](https://shopify.github.io/liquid/) ending and copied over to the _site directory.
 
 You can for example write a file named `listposts.json` with the following content.
 

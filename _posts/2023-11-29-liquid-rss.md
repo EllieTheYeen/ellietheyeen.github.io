@@ -112,7 +112,7 @@ We also want only articles with set dates since otherwise it would be hard to ge
 </feed>
 {% endraw %}
 ```
-This Liquid code will generate a XML file that can be read by clients like [Thunderbird](https://www.thunderbird.net/) and [Vore](https://vore.website/). Firefox used to have RSS bookmarks which seems to have been removed now but there is an addon called [Livemarks](https://addons.mozilla.org/en-US/firefox/addon/livemarks/) that adds it back. It only make a feed from one specific category here but you can easily change it to what you want. Jekyll provices the `id` for each page that we can use to make an id unless we ofc use the `path` attribute instead as long as we do not change it later since that could cause issues.
+This Liquid code will generate a XML file that can be read by clients like [Thunderbird](https://www.thunderbird.net/) and [Vore](https://vore.website/). Firefox used to have RSS bookmarks which seems to have been removed now but there is an addon called [Livemarks](https://addons.mozilla.org/en-US/firefox/addon/livemarks/) that adds it back. It only make a feed from one specific category here but you can easily change it to what you want. Jekyll provides the `id` for each page that we can use to make an id unless we ofc use the `path` attribute instead as long as we do not change it later since that could cause issues.
 
 Here is an example of what the template just generated when there is a single test article in the test category.
 
@@ -204,6 +204,6 @@ Now if we compare it to what the actual Jekyll feed generates we see that it is 
 
 RSS and Atom feeds are still quite used in some places like Mastodon for example where for each user it automatically generates an RSS feed that you can get their posts from. My own feed is the following: <https://toot.cat/@DPSsys.rss> and you can put it in Thunderbird or similar.
 
-There are also more modernized versions of RSS where it has more befome a push protocol rather than a pull protocol using things such as [websub](https://www.w3.org/TR/websub/) which used to be called pubsubhubbub which [YouTube uses](https://developers.google.com/youtube/v3/guides/push_notifications) to notify on new videos.
+There are also more modernized versions of RSS where it has more become a push protocol rather than a pull protocol using things such as [websub](https://www.w3.org/TR/websub/) which used to be called pubsubhubbub which [YouTube uses](https://developers.google.com/youtube/v3/guides/push_notifications) to notify on new videos.
 
 You can do many fun things with RSS feeds like make bots that read them and post new articles on social media whenever they arrive [such as this blog has](https://ellietheyeen.github.io/2023/10/29/Making-a-simple-RSS-to-Mastodon-poster-powered-by-GitHub-hooks.html).

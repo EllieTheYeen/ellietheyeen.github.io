@@ -30,7 +30,7 @@ git config --global user.name Ellie The Yeen
 ```
 Note that the email is not a real email as I am using email privacy here which GitHub and GitLab for example has which can be used to avoid spam.
 
-These are then saved in your user folder in `.gitconfig` which you can acess with the path `~/.gitconfig` as `~` gets replaced with your user folder in the shell.
+These are then saved in your user folder in `.gitconfig` which you can access with the path `~/.gitconfig` as `~` gets replaced with your user folder in the shell.
 
 ### SSH keys
 Git either requires HTTPS or SSH authentication where SSH is really recommended as HTTPS tends to use username and password or possibly an access token where SSH uses a SSH key.
@@ -53,7 +53,7 @@ Example of add command
 git remote add origin git@github.com:EllieTheYeen/ellietheyeen.github.io.git
 ```
 
-If you clone a repository you do not need to set the remote as it will be aleady set.
+If you clone a repository you do not need to set the remote as it will be already set.
 
 ## Basic usage
 Generally there are a few main commands you tend to use in normal usage of git that is `git add`, `git commit`, `git push`, `git init`, `git clone`, `git status`, `git diff` and `git pull`
@@ -62,7 +62,7 @@ Generally there are a few main commands you tend to use in normal usage of git t
 `git status` is one of the more used commands and you should use it to know the current state of which files are staged and how many commits are not pushed yet plus some more info that is useful. Use it whenever you are unsure what state you left a repository in.
 
 `git show`  
-Shows a more detailed status includin the latest commit and a diff.
+Shows a more detailed status including the latest commit and a diff.
 
 ### init
 `git init` is a command used to initialize a repository that is empty. This is good for when there is no remote or when the remote is uninitialized. It can also be used when you have not pulled anything yet.
@@ -145,7 +145,7 @@ Diff staged changes towards the last commit. Useful to see what you did before s
 ```sh
 git diff filename
 ```
-Diff a specific file. Useful if you have a large amoutn of changes.
+Diff a specific file. Useful if you have a large amount of changes.
 
 ```sh
 git diff HEAD^1
@@ -216,7 +216,7 @@ git push --force # Will forcefully push. Useful when you want to forcefully remo
 A pull will fetch from the remote and update your local files. If you have made any local changes you can run `git stash` to store them away first before pulling and then restore them with `git stash pop`. 
 
 ## Undo various things
-You often want to undo various things in git and it is tupically done with `git reset` where `git reset --hard` will erase local changes and `git reset --soft` will not. You can specify which commit to revert to by id or using the `HEAD^1` format.
+You often want to undo various things in git and it is typically done with `git reset` where `git reset --hard` will erase local changes and `git reset --soft` will not. You can specify which commit to revert to by id or using the `HEAD^1` format.
 
 There are a lot of specific cases where you want to restore to previous states but if you want to just take a look at something use `git checkout` instead which is also the command you use for switching branches even if you can also use `git switch` for that. I recommend searching on the internet for the specific way you are trying to reset.
 

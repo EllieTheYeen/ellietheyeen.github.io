@@ -66,7 +66,7 @@ Caja which is a simple file manager with white background showing a pane to the 
 
 Here is Caja which is a good example of one of the file managers that can come preinstalled on Linux such as an Ubuntu version or something similar that is graphic. It has some good features like being able to connect to Windows file sharing servers. As Linux does not inherently have any file manager this is something that the distributer installers in a distribution.
 
-## pcmanfb-qt
+## pcmanfm-qt
 [![
 pcmanfm-qt which is mostly identical to Caja but more simplistic and has white background like there are just a few icons on left pane like desktop, trash, computer and applications, the top bare is minimalistic too with a few things like back and forward button and one button for each directory you are in. The main pane has icons like a previewed picture and the txt and similar files are seen as a pic of a paper icon and the shell files are seen as a black paper with a hashbang icon on it
 ](/images/pcmanfm-qt.png)](/images/pcmanfm-qt.png)

@@ -24,7 +24,7 @@ The way we are going to do this is to first define what type of fields there are
 7. `name`: The name of the share button as it is being presented on the website.
 8. `color`: The color of the share button.
 
-Remember these names are arbritrary but we need to define them in order for us to generate the correct data in order to generate a share button that works.
+Remember these names are arbitrary but we need to define them in order for us to generate the correct data in order to generate a share button that works.
 
 ## Configuration
 Now that we have defined what kind of fields exist we should define them in the configuration for the code to use. This is placed in `_config.yml` which is the Jekyll config but you can probably make your own solution if you are using another templating engine. As you see we define here what kind of share buttons we want to appear at the bottom of the page.

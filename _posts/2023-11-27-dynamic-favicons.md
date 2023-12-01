@@ -28,6 +28,6 @@ However there is one thing we must do. While favicons are often found by the bro
 ```
 That is what defines the icon that will later be changed in order for the icon to be changed.
 
-There are many usages for a dynamic favicon. The most obvious example is social media sites where they might have different favicons depending on how many notifications you have but you could have stuff like one that cahnges when your 3D printer is done on [OctoPrint](https://octoprint.org/). 
+There are many usages for a dynamic favicon. The most obvious example is social media sites where they might have different favicons depending on how many notifications you have but you could have stuff like one that changes when your 3D printer is done on [OctoPrint](https://octoprint.org/). 
 
 Take note of what other websites you see using dynamic favicons and maybe you want to make a website using one yourself.
