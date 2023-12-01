@@ -13,7 +13,7 @@ So you have a website and you are using a static website generator like jekyll o
 Generally on blogs the comment section loads automatically but we generally do not want to make a heavy site and there is also the privacy issues of automatically loading external things that might have tracking inside them so we leave it up so the user if they want to load the comment section or not.
 
 Below is an example of an include HTML file which I made for usage for a dynamically loaded comment section so only when you press the button the external sites are actually loaded.  
-<https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/_includes/disqus.html>
+<https://github.com/EllieTheYeen/ellietheyeen.github.io/blob/main/_includes/comments.html>
 
 Part of `includes/comments.html`
 {% raw %}
