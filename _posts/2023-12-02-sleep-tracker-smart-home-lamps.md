@@ -9,7 +9,7 @@ tags:
 - shell
 - iot
 ---
-So I recently decided to fix up my command line sleep tracker since it is a thing I have wanted to fix for a while. The specific issue is that you specifically have to press enter to do the wakeup thing. The whole tracker works that you run it and all the lamps turn off then it waits for a key press and when a key is pressed it turns the lamps on again and tell how long time you slept for.
+So I recently decided to fix up my command line sleep tracker since it is a thing I have wanted to fix for a while. The specific issue is that I specifically have to find the enter key to press when I wake up to turn on the lights. The whole tracker works that you run it and all the lamps turn off then it waits for a key press and when a key is pressed it turns the lamps on again and tell how long time you slept for.
 
 The reason it specifically had to be the enter key is that Python has a function called `input` that reads whatever characters you press and returns when you press enter. This is however now the only way you can do in a terminal as you can read character by character too but that requires changing the terminal mode as it usually waits for lines.
 
