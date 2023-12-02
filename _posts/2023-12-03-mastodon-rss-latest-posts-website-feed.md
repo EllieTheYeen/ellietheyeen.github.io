@@ -4,6 +4,7 @@ title: Mastodon RSS latest posts website feed
 date: 2023-12-03 00:07
 tags:
 - javascript
+- mastodon
 - html
 - rss
 ---
@@ -26,8 +27,8 @@ If you click on it you will see an RSS feed and you can subscribe to it in clien
 ## Example
 Below you will see 2 buttons. The left one loads only some posts as an example of what it can look like when loading a few posts this way and the right one will fetch live my latest posts from Mastodon.
 
-<button onclick="event.target.remove(); loadexample1(); delete loadexample1">Load stored example</button>
-<button onclick="event.target.remove(); loadexample2(); delete loadexample2">Load live example</button>
+<button class="btn" onclick="event.target.remove(); loadexample1(); delete loadexample1">Load stored example</button>
+<button class="btn" onclick="event.target.remove(); loadexample2(); delete loadexample2">Load live example</button>
 <div style="display: grid;">
 <div id="someposts1" style="width: 500px; grid-column: 1;"></div>
 <div id="someposts2" style="width: 500px; grid-column: 2;"></div>
