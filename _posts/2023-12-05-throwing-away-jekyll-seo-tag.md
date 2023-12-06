@@ -48,7 +48,7 @@ But that does not stop us from doing the whole thing ourselves if we want some c
 #### `header.html` liquid
 ```html
 {%- raw -%}
-<title>{{ page.title | append: ' | ' | append: site.title | escape }}</title>
+<title>{{ page.title | append: ' | ' | append: site.title | slice: 0, 70 | escape }}</title>
 {%- assign desc = page.excerpt | strip_html | slice: 0, 160 | escape %}
 <!-- Standardized -->
 <meta name="author" content="{{ page.author | default: site.author | escape }}" />

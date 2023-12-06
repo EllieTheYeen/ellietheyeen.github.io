@@ -1,4 +1,4 @@
-<title>{{ page.title | append: ' | ' | append: site.title | escape }}</title>
+<title>{{ page.title | append: ' | ' | append: site.title | slice: 0, 70 | escape }}</title>
 {%- assign desc = page.excerpt | strip_html | slice: 0, 160 | escape %}
 <!-- Standardized -->
 <meta name="author" content="{{ page.author | default: site.author | escape }}" />
