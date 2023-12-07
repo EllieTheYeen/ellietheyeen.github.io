@@ -48,10 +48,10 @@ But that does not stop us from doing the whole thing ourselves if we want some c
 #### `header.html` liquid
 ```html
 {%- raw -%}
-<title>{{ page.title | append: ' | ' | append: site.title | slice: 0, 70 | escape }}</title>
-{%- assign desc = page.excerpt | strip_html | slice: 0, 160 | escape %}
+<title>{{ page.title | append: ' | ' | append: site.title | strip | slice: 0, 70 | escape }}</title>
+{%- assign desc = page.excerpt | strip_html | strip | slice: 0, 160 | escape %}
 <!-- Standardized -->
-<meta name="author" content="{{ page.author | default: site.author | escape }}" />
+<meta name="author" content="{{ page.author | default: site.author | strip | escape }}" />
 <meta name="robots" content="index, follow" />
 <meta name="description" content="{{ desc }}" />
 <meta name="msapplication-navbutton-color" content="#ff1526" />
@@ -59,13 +59,13 @@ But that does not stop us from doing the whole thing ourselves if we want some c
 <!-- OpenGraph -->
 <meta name="og:url" content="{{ page.url | absolute_url }}" />
 <meta name="og:type" content="{%- if page.date -%}article{%- else -%}website{%- endif -%}" />
-<meta name="og:title" content="{{ page.title | escape }}" />
+<meta name="og:title" content="{{ page.title | strip | escape }}" />
 {% assign image = page.image.path | default: page.image | default: site.defaultmedia -%}
 {%- if image -%}
 <meta name="og:image" content="{{ image | absolute_url }}" />
 {% endif -%}
 <meta name="og:locale" content="en_US" />
-<meta name="og:site_name" content="{{ site.title }}" />
+<meta name="og:site_name" content="{{ site.title | strip | escape }}" />
 <meta name="og:description" content="{{ desc }}" />
 {%- if page.date %}
 <meta name="article:published_time" content="{{ page.date | date: '%Y-%m-%dT%H:%M:%S+01:00' }}" />
