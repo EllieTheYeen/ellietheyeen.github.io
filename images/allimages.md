@@ -1,11 +1,8 @@
 ---
 layout: base
+permalink: /images/
 ---
 A file to make it easier to paste in images in VSCode and write alt text
-
-[![
-Do not
-](/images/image.png)](/images/image.png)
 
 [![{%- raw -%}
 Syntax highlighted code
