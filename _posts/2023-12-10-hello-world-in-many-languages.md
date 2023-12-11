@@ -92,7 +92,7 @@ echo -e '\e[31;1mJava\e[39m'
 time java hello.java
 ```
 
-Which gives the output ans as you see Java is a bit slow when not compiled
+Which gives the output and as you see Java is a bit slow when not compiled
 
 `output`
 ```sh

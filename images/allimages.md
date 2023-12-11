@@ -4,6 +4,25 @@ permalink: /images/
 ---
 A file to make it easier to paste in images in VSCode and write alt text
 
+[![
+import re
+#
+def multiple_replace(replacements, text):
+    # Create a regular expression from the dictionary keys
+    regex = re.compile("(%s)" % "|".join(re.escape(a) for a in replacements), re.I)
+    # For each match, look-up corresponding value in dictionary
+    return regex.sub(lambda mo: replacements[mo.group().lower()], text)
+#
+if __name__ == "__main__":
+    s = "larry wall is the creator of perl"
+    d = {
+        "larry wall": "Guido van Rossum",
+        "creator": "Benevolent Dictator for Life",
+        "perl": "Python",
+    }
+    print(multiple_replace(d, s))
+](/images/23-12-11_05-10-05.png)](/images/23-12-11_05-10-05.png)
+
 [![{%- raw -%}
 Syntax highlighted code
 ---
