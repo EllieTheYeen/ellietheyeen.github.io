@@ -5,6 +5,10 @@ permalink: /images/
 A file to make it easier to paste in images in VSCode and write alt text
 
 [![
+A square image where the lower background is dark blue and upper background is dark green, There are 2 big squares where one is in the upper half and one in the lower, There are several small white squares too and between the 2 big squares there is 2 pink lines that leads to a third point
+](/images/targeter.png)](/images/targeter.png)
+
+[![
 import re
 #
 def multiple_replace(replacements, text):
