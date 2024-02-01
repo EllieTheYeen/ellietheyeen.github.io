@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Get notifications when 3D prints are done in Octoprint
+title: Get notifications when 3D prints are done in OctoPrint
 date: 2024-02-01 20:49
 tags:
-photography
-3dprinting
-octoprint
-python
-shell
+- photography
+- 3dprinting
+- octoprint
+- python
+- shell
 ---
 
 When you have 3D prints in OctoPrint it is convenient to know when a print is done and how it looks. Since Octoprint already tends to be set up with a webcam or other camera in mind this is quite easy to set up.
