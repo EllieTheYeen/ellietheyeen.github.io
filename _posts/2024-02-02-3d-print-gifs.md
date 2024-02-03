@@ -4,6 +4,7 @@ title: 3D print GIFs using OctoPrint
 date: 2024-02-02 03:22
 tags:
 - photography
+- electronics
 - 3dprinting
 - octoprint
 - python

@@ -4,6 +4,7 @@ title: Get notifications when 3D prints are done in OctoPrint
 date: 2024-02-01 20:49
 tags:
 - photography
+- electronics
 - 3dprinting
 - octoprint
 - python

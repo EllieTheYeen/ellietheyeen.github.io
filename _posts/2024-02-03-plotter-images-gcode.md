@@ -25,6 +25,7 @@ There is also one thing you might have noticed if you saw the images and that is
 
 So below you can see the code used to make the entire gcode for the plot. You might notice several things like it asks the user if the current calculated contrast is ok and you can either press enter to accept or enter a new contrast to set it and get a preview which it writes to an image which you can see and see if it is acceptable. The code is quite complex and there are quite a few things in it line detecting lines to be plotted and such and that is also something that should be moved away from eventually.
 
+`makeplot.py`
 ```py
 from PIL import Image, ImageDraw
 
