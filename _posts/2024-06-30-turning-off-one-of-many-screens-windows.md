@@ -28,6 +28,7 @@ The optimal solution to this turned out to be to be quite strange and is to set 
 
 Here is the solution for it which I could use for my stream deck and how it works is that it turns off the screen by setting the resolution to zero to turn the screen off but does not save those settings to the registry and the way it turns the display on again is resetting the settings from the registry.
 
+`display4toggle.py`
 ```python
 #!/usr/bin/python
 import win32api, win32con, argparse
