@@ -3,6 +3,7 @@ layout: post
 title: Throwing away jekyll-seo-tag
 date: 2023-12-05 02:42
 tags:
+- meta_tags
 - jekyll
 - liquid
 - seo

@@ -2,6 +2,9 @@
 title: Open graph tags for SEO and social media optimization
 date: 2023-11-04 02:52:00 +0100
 image: /images/twitterpostedlink.png
+tags:
+- meta_tags
+- seo
 ---
 Have you ever seen links posted on social media where you get a preview of the content of the website that you link and wonder how that is made. It is done using certain HTML tags that a bot fetches when you link the webpage. This is of course subject to the `robots.txt` in the web root as most bots tend to follow that when fetching content. Below is an example of how that can look like.
 
