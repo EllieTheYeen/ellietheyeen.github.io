@@ -4,6 +4,22 @@ permalink: /images/
 ---
 A file to make it easier to paste in images in VSCode and write alt text
 
+![
+Welcome to Leaf 3
+Documentation
+Whether you are new to Leaf or have prior experience, we recommend checking out our documentation.
+Documentation
+Twitter
+Follow Leaf PHP on Twitter to get latest news about releases, new modules, tutorials and amazing tips.
+@leafphp
+GitHub
+All leaf projects are opensource and publicly hosted on GitHub. You can contribute or pull the code to make enhancements.
+@leafsphp
+YouTube
+We have a youtube channel where we upload videos on leaf, our modules, frameworks and other projects.
+Leaf YouTube Channel
+](/images/leafphp.png)
+
 [![
 A square image where the lower background is dark blue and upper background is dark green, There are 2 big squares where one is in the upper half and one in the lower, There are several small white squares too and between the 2 big squares there is 2 pink lines that leads to a third point
 ](/images/targeter.png)](/images/targeter.png)
