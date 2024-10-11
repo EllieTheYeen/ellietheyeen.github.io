@@ -10,6 +10,9 @@ tags:
 ---
 You might have heard about [inetd](https://en.wikipedia.org/wiki/Inetd) which is often called a [super-server](https://en.wikipedia.org/wiki/Super-server) according to Wikipedia. But did you know the systemd can do the same thing using something called [systemd sockets](https://www.freedesktop.org/software/systemd/man/latest/systemd.socket.html). I will show you how to use them.
 
+* 
+{:toc}
+
 At first we are going to start with how to actually set them up and how they work. 
 
 The first thing to do is to create the socket unit which looks like this
@@ -139,3 +142,34 @@ systemctl --user status testsocket@\*
 and scroll a bit up and down to find the status as it creates a temporary service for every invocation that you can find in the logs.
 
 Anyway now you know the basics of systemd sockets so you can have fun with them.
+
+## Added later
+
+### 2024-10-11 23:30
+So apparently you can set stdin and stdout to be used to write to the socket. Here is an example. Start by changing your
+`testsocket@.service`
+```ini
+[Unit]
+Description=Test socket
+
+[Service]
+ExecStart=/home/yeen/blep.sh
+StandardInput=socket
+StandardOutput=socket
+StandardError=journal
+```
+It is possible to set all 3 to socket but you should generally set the error one specifically to journal since otherwise it will write stderr to the socket too instead of into the journal.
+
+Now we can update the
+`blep.sh`
+```sh
+#!/bin/sh
+lsof -p $$
+echo log something here >&2
+```
+And now you can log things while also using stdout to write to the socket.
+
+It is also very useful to start another terminal and use the following command to follow everything that happens in the log.
+```sh
+journalctl --user -f
+```
