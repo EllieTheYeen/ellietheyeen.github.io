@@ -13,4 +13,3 @@ Hi I am a furry from Sweden that does many [projects](/projects.html) mostly in 
 [Twitter](https://twitter.com/EllieTheYeen)  
 [Tumblr](https://dpssys.tumblr.com/)  
 [GitHub](https://github.com/EllieTheYeen)  
-[Cohost](https://cohost.org/EllieTheYeen)  
