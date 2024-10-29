@@ -113,3 +113,5 @@ There are a few more things that I recommend and one of them is to install [webu
 Personally I use that and I also use my own browser extension which gives me a menu on every page to start a download which I might write about next.
 
 Now if you get everything working you can just look at your finished files directory now and then and see whenever a file is downloaded and finished and start using it even tho the whole torrent that is downloading is not fully finished yet or see every other file too as soon as it is downloaded without it taking extra hard drive space as soon as it finished.
+
+[Part 2](/2024/10/29/downloader-browser-extension.html)
