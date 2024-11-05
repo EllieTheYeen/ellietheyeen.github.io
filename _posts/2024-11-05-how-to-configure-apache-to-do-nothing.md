@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to configure Apache to do nothing
-date: 2024-11-05 22:32
+date: 2024-11-05 21:37
 tags:
 - apache
 ---
